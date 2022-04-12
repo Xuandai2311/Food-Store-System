@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .button-base {
+      @apply text-white text-base font-semibold bg-red-base w-4/5 h-16 border-0 rounded-4xl;
+    }
+
+  }
+  
