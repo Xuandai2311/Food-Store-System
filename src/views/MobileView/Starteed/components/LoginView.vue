@@ -31,7 +31,7 @@
           ></el-input
         ></el-form-item>
       </el-form>
-      <span class="text-red-light text-left">Quên mật khẩu?</span>
+      <span class="text-red text-left">Quên mật khẩu?</span>
     </div>
     <el-button
       to="/home"

@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import DetailMenu from "@/views/MobileView/Home/components/DetailMenu.vue";
+import Home from "@/views/MobileView/Home/HomeView.vue";
 
 Vue.use(VueRouter);
 
@@ -25,7 +27,12 @@ const routes = [
   {
     path: "/home",
     name: "home",
-    component: () => import("@/views/MobileView/Home/HomeView"),
+    component: Home,
+  },
+  {
+    path: "/home/menu",
+    name: "menu",
+    component: DetailMenu,
   },
 ];
 

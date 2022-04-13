@@ -1,9 +1,6 @@
 <template>
-  <div class="footer">
-    <el-menu
-      default-active="5"
-      class="flex fixed justify-center bottom-0 w-full py-2"
-    >
+  <div class="footer mx-auto">
+    <el-menu default-active="1" class="flex justify-around bottom-0 py-2">
       <el-menu-item index="1">
         <i class="icon el-icon-s-home"></i>
         <span slot="title">Home</span>
@@ -12,13 +9,7 @@
         <i class="icon el-icon-s-order"></i>
         <span slot="title">Order</span>
       </el-menu-item>
-      <el-menu-item index="3">
-        <img
-          class="relative bottom-8"
-          src="@/assets/images/card.svg"
-          alt="Cards"
-        />
-      </el-menu-item>
+
       <el-menu-item index="4">
         <i class="icon el-icon-chat-dot-square"></i>
         <span slot="title">Chat</span>
@@ -51,7 +42,7 @@ export default {};
     background-color: theme("colors.white");
   }
   .el-menu-item.is-active {
-    color: theme("colors.red-light");
+    color: theme("colors.red-base");
   }
 }
 </style>
