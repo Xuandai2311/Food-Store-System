@@ -1,13 +1,17 @@
 <template>
-  <div class="home">
-    <home-view />
+  <div>
+    <starteed-view class="sm:hidden" />
+    <div class="hidden sm:block">web</div>
   </div>
 </template>
 
 <script>
-import HomeView from "@/views/PosView/HomeView.vue";
+// @ is an alias to /src
+import StarteedView from "@/views/MobileView/Starteed/StarteedView.vue";
 
 export default {
-  components: { HomeView },
+  components: {
+    StarteedView,
+  },
 };
 </script>

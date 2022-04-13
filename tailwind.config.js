@@ -4,20 +4,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "red-light": "#ff4c60",
+        "red-base": "#E94B64",
         black: "#000000",
-        white: "#ffffff",
-        yellow: "#ffca40",
-        dark: "#1f1d2b",
+        gray: "#909399",
+        background: "#EEEEEE",
         red: "#E42E2E",
         blue: "#0066CC",
         green: "#31C375",
         orange: "#fa8C16",
-        background2: "#F6F5FA",
-        bgDashboard: {
-          red: "#FFD3CD",
-          blue: "#C0DBFF",
-          green: "#E9F7F0",
+        white: "#ffffff",
+        bgStarteed: {
+          be: "#F9DDC2",
+          white: "#F5F5F8",
+        },
+        bgHeaderHome: {
+          red: "#FF5F64",
+          "red-light": "#FF5E58",
         },
       },
       lineHeight: {
@@ -28,23 +30,22 @@ module.exports = {
         "4xl": "1.875rem",
       },
       boxShadow: {
-        normal: "0px 4px 15px rgba(0, 0, 0, 0.1)",
+        mini: "0px 3.625px 3.625px rgba(196, 63, 21, 0.1)",
+        normal: "0px -1px 4px rgba(196, 196, 196, 0.3);",
         "4xl": "0px 4px 10px rgba(0, 0, 0, 0.25)",
         "5xl": "0px 0px 25px rgba(0, 0, 0, 0.1)",
       },
       height: {
         100: "100vh",
-        tableDetailCustomers: "calc(100vh - 45vh)",
-        tableDetailSale: "calc(100vh - 62vh)",
       },
       width: {
-        26: "107px",
+        "3/10": "30%",
+      },
+      spacing: {
+        17: "4.5rem",
       },
       fontFamily: {
         walsheim: "GT Walsheim",
-      },
-      margin: {
-        26: "107px",
       },
     },
   },
