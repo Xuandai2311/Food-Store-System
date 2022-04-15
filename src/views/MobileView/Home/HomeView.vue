@@ -1,21 +1,23 @@
 <template>
-  <div class="home bg-background2 sm:hidden">
-    <header-home-view />
-    <banner-carousel-view />
-    <wallet-view />
-    <service-view />
-    <menu-view />
-    <tab-bar-footer-view class="fixed bottom-0 w-full" />
+  <div class="home bg-bgHome sm:hidden">
+    <div class="relative mb-16">
+      <header-home-view />
+      <banner-carousel-view />
+      <wallet-view class="shadow-sm" />
+      <service-view class="my-2" />
+      <menu-view />
+    </div>
+    <tab-bar-footer-view class="fixed bottom-0 w-full shadow-5xl" />
   </div>
 </template>
 
 <script>
-import TabBarFooterView from "@/views/MobileView/Home/components/TabBarFooterView.vue";
-import HeaderHomeView from "@/views/MobileView/Home/components/HeaderHomeView.vue";
-import BannerCarouselView from "./components/BannerCarouselView.vue";
-import WalletView from "./components/WalletView.vue";
-import ServiceView from "./components/ServiceView.vue";
-import MenuView from "./components/MenuView.vue";
+import TabBarFooterView from "@/components/MobileView/TabBarFooterView.vue";
+import HeaderHomeView from "@/views/MobileView/Home/components/home/HeaderHomeView.vue";
+import BannerCarouselView from "@/views/MobileView/Home/components/home/BannerCarouselView.vue";
+import WalletView from "@/views/MobileView/Home/components/home/WalletView.vue";
+import ServiceView from "@/views/MobileView/Home/components/home/ServiceView.vue";
+import MenuView from "@/views/MobileView/Home/components/home/MenuView.vue";
 export default {
   components: {
     TabBarFooterView,

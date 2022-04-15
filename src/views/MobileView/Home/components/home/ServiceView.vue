@@ -4,7 +4,7 @@
       <div
         v-for="item in listService"
         :key="item.id"
-        class="grid justify-items-center"
+        class="grid justify-items-center gap-3"
       >
         <img :src="getImgUrl(item.img)" :alt="item.img" />
         <div class="text-left">

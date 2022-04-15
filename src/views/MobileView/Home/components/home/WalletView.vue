@@ -1,6 +1,6 @@
 <template>
   <div class="wallet bg-white">
-    <div class="divide-x divide-gray flex justify-around py-3">
+    <div class="divide-x-2 divide-gray flex justify-around py-3">
       <div v-for="item in listWallet" :key="item.id" class="flex pl-8 gap-4">
         <img :src="getImgUrl(item.img)" :alt="item.img" />
         <div class="text-left">

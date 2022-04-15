@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import DetailMenu from "@/views/MobileView/Home/components/DetailMenu.vue";
 import Home from "@/views/MobileView/Home/HomeView.vue";
 
 Vue.use(VueRouter);
@@ -15,8 +14,7 @@ const routes = [
   {
     path: "/login",
     name: "login",
-    component: () =>
-      import("@/views/MobileView/Starteed/components/LoginView.vue"),
+    component: () => import("@/views/MobileView/Starteed/components/LoginView"),
   },
   {
     path: "/register",
@@ -32,7 +30,8 @@ const routes = [
   {
     path: "/home/menu",
     name: "menu",
-    component: DetailMenu,
+    component: () =>
+      import("@/views/MobileView/Home/components/detailmenu/DetailMenu"),
   },
 ];
 

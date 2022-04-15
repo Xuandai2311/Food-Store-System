@@ -17,7 +17,7 @@
           </div>
           <div class="grid grid-cols-2 gap-5">
             <div
-              class="pb-6 pt-3 grid gap-4 justify-items-center bg-white rounded-3xl"
+              class="menu-item"
               v-for="item in listMenuFood"
               :key="item.id"
               @click="abc"
@@ -45,11 +45,7 @@
             </h2>
           </div>
           <div class="grid grid-cols-2 gap-5">
-            <div
-              class="pb-6 pt-3 grid gap-4 justify-items-center bg-white rounded-3xl"
-              v-for="item in listMenuDrink"
-              :key="item.id"
-            >
+            <div class="menu-item" v-for="item in listMenuDrink" :key="item.id">
               <img
                 class="w-28 h-28 rounded-full"
                 :src="getImgUrl(item.img)"
@@ -130,8 +126,12 @@ export default {
 
 <style lang="scss">
 .menu {
+  .el-tabs__item {
+    font-size: 16px;
+  }
   .el-tabs__item.is-active {
     color: theme("colors.red-base");
+    font-size: 16px;
   }
   .el-tabs__active-bar {
     background-color: theme("colors.red-base");
