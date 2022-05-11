@@ -1,6 +1,6 @@
 <template>
   <div class="service">
-    <div class="flex justify-around py-3">
+    <div class="flex justify-around py-3 overflow-x-scroll">
       <div
         v-for="item in listService"
         :key="item.id"

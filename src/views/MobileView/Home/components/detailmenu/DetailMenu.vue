@@ -1,9 +1,9 @@
 <template>
   <div class="detail-menu bg-bgHome">
-    <div class="background-header">
-      <router-link to="/home" tag="button" class="absolute left-6 top-5"
-        ><img src="@/assets/images/backbtn.svg" alt="Back Home"
-      /></router-link>
+    <div class="background-header mb-16">
+      <router-link to="/home" tag="button" class="absolute left-6 top-5">
+        <img src="@/assets/images/backbtn.svg" alt="Back Home" />
+      </router-link>
       <img
         src="@/assets/images/favorite.svg"
         alt="Favorite"
@@ -14,8 +14,8 @@
         src="@/assets/images/backgroundfood.png"
         alt="Background Menu Food"
       />
+      <restaurant-info />
     </div>
-    <restaurant-info />
     <tab-bar-footer-view class="fixed bottom-0 w-full shadow-5xl" />
   </div>
 </template>

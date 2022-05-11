@@ -1,10 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import Home from "@/views/MobileView/Home/HomeView.vue";
-
 Vue.use(VueRouter);
-
+import Layout from "@/layout/MobileView";
 const routes = [
   {
     path: "/",
@@ -23,15 +21,53 @@ const routes = [
       import("@/views/MobileView/Starteed/components/RegisterView"),
   },
   {
-    path: "/home",
-    name: "home",
-    component: Home,
+    path: "/",
+    component: Layout,
+    children: [
+      {
+        path: "/home",
+        component: () => import("@/views/MobileView/Home/HomeView.vue"),
+      },
+    ],
   },
   {
     path: "/home/menu",
     name: "menu",
     component: () =>
       import("@/views/MobileView/Home/components/detailmenu/DetailMenu"),
+  },
+  {
+    path: "/",
+    component: Layout,
+    children: [
+      {
+        path: "/order",
+        component: () =>
+          import("@/views/MobileView/Home/components/order/OrderView.vue"),
+      },
+    ],
+  },
+  {
+    path: "/",
+    component: Layout,
+    children: [
+      {
+        path: "/chat",
+        component: () =>
+          import("@/views/MobileView/Home/components/chat/ChatView.vue"),
+      },
+    ],
+  },
+  {
+    path: "/",
+    component: Layout,
+    children: [
+      {
+        path: "/profile",
+        component: () =>
+          import("@/views/MobileView/Home/components/profile/ProfileView.vue"),
+      },
+    ],
   },
 ];
 

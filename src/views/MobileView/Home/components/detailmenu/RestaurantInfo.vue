@@ -1,32 +1,24 @@
 <template>
   <div class="resturant-info">
-    <div class="name-description text-left mx-4 mt-5">
-      <h2 class="text-2xl font-semibold">Đ Food</h2>
-      <div class="flex justify-between mt-3">
-        <p>123, Ô Chợ Dừa, Đống Đa, HN</p>
-        <el-link type="danger" href="" class="">Xem địa chỉ</el-link>
-      </div>
-    </div>
-    <div
-      class="common-info divide-x-2 divide-gray flex justify-between py-6 mx-4"
-    >
-      <div class="text-left" v-for="item in commonInfo" :key="item.id">
-        <p class="font-bold text-base">{{ item.detail }}</p>
-        <p>{{ item.title }}</p>
-      </div>
-    </div>
-    <div class="delivery-info bg-white text-left p-4 border-y border-gray">
-      <div class="flex justify-between">
-        <p class="font-bold text-base">Khoảng Cách: 0.6Km</p>
-        <el-link type="danger" href="" class="">Thay đổi địa chỉ</el-link>
-      </div>
-      <p>Thời gian giao hàng: 10 phút</p>
-    </div>
+    <name-description />
+    <common-info :common-info="commonInfo" />
+    <delivery-info />
+    <discount-info :discount-info="DiscountInfo" />
   </div>
 </template>
 
 <script>
 export default {
+  components: {
+    NameDescription: () =>
+      import("@/components/MobileView/DetailMenu/NameDescription.vue"),
+    CommonInfo: () =>
+      import("@/components/MobileView/DetailMenu/CommonInfo.vue"),
+    DeliveryInfo: () =>
+      import("@/components/MobileView/DetailMenu/DeliveryInfo.vue"),
+    DiscountInfo: () =>
+      import("@/components/MobileView/DetailMenu/DiscountInfo.vue"),
+  },
   data() {
     return {
       commonInfo: [
@@ -44,6 +36,23 @@ export default {
           id: 3,
           title: "8AM - 10PM",
           detail: "Mở cửa",
+        },
+      ],
+      DiscountInfo: [
+        {
+          id: 1,
+          title: "F&B Discount 75%",
+          detail: "Discounts for all menus",
+        },
+        {
+          id: 2,
+          title: "Shipping Discount 50%",
+          detail: "Applicable for all merchants ",
+        },
+        {
+          id: 3,
+          title: "F&B Discount 75%",
+          detail: "Discounts for all menus",
         },
       ],
     };
