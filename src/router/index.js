@@ -23,18 +23,28 @@ const routes = [
   {
     path: "/",
     component: Layout,
+    redirect: "/home",
     children: [
       {
         path: "/home",
+        name: "Home",
         component: () => import("@/views/MobileView/Home/HomeView.vue"),
       },
     ],
   },
   {
-    path: "/home/menu",
-    name: "menu",
-    component: () =>
-      import("@/views/MobileView/Home/components/detailmenu/DetailMenu"),
+    path: "/home",
+    component: Layout,
+    children: [
+      {
+        path: "/home/menu_food",
+        name: "Home",
+        component: () =>
+          import(
+            "@/views/MobileView/Home/components/home/detailmenu/DetailMenu.vue"
+          ),
+      },
+    ],
   },
   {
     path: "/",
@@ -42,6 +52,7 @@ const routes = [
     children: [
       {
         path: "/order",
+        name: "Order",
         component: () =>
           import("@/views/MobileView/Home/components/order/OrderView.vue"),
       },
@@ -53,6 +64,7 @@ const routes = [
     children: [
       {
         path: "/chat",
+        name: "Chat",
         component: () =>
           import("@/views/MobileView/Home/components/chat/ChatView.vue"),
       },
@@ -64,6 +76,7 @@ const routes = [
     children: [
       {
         path: "/profile",
+        name: "Profile",
         component: () =>
           import("@/views/MobileView/Home/components/profile/ProfileView.vue"),
       },

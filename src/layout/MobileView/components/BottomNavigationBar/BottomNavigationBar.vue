@@ -1,24 +1,27 @@
 <template>
   <div class="footer mx-auto">
     <footer class="LayoutDefault__footer">
-      <el-menu :default-active="1" class="flex justify-around bottom-0 py-2">
-        <el-menu-item index="1">
+      <el-menu
+        :default-active="activeMenu"
+        class="flex justify-around bottom-0 py-2"
+      >
+        <el-menu-item index="Home">
           <i class="icon el-icon-s-home"></i>
           <router-link to="/home" class="grid">Home</router-link>
         </el-menu-item>
-        <el-menu-item index="2">
+        <el-menu-item index="Order">
           <router-link to="/order" class="grid">
             <i class="icon el-icon-s-order"></i>
             Order
           </router-link>
         </el-menu-item>
-        <el-menu-item index="4">
+        <el-menu-item index="Chat">
           <router-link to="/chat" class="grid">
             <i class="icon el-icon-chat-dot-square"></i>
             Chat
           </router-link>
         </el-menu-item>
-        <el-menu-item index="5">
+        <el-menu-item index="Profile">
           <router-link to="/profile" class="grid">
             <i class="icon el-icon-user"></i>
             Profile
@@ -30,7 +33,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    activeMenu() {
+      const activeMenu = this.$route.name;
+      console.log(activeMenu);
+      return activeMenu;
+    },
+  },
+};
 </script>
 
 <style lang="scss">

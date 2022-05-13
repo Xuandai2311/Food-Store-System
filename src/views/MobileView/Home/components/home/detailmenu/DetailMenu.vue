@@ -1,6 +1,6 @@
 <template>
   <div class="detail-menu bg-bgHome">
-    <div class="background-header mb-16">
+    <div class="background-header mb-17">
       <router-link to="/home" tag="button" class="absolute left-6 top-5">
         <img src="@/assets/images/backbtn.svg" alt="Back Home" />
       </router-link>
@@ -14,19 +14,19 @@
         src="@/assets/images/backgroundfood.png"
         alt="Background Menu Food"
       />
-      <restaurant-info />
+      <restaurant-info class="mx-4" />
+      <menu-tabs class="mx-4" />
     </div>
-    <tab-bar-footer-view class="fixed bottom-0 w-full shadow-5xl" />
   </div>
 </template>
 
 <script>
-import TabBarFooterView from "@/components/MobileView/TabBarFooterView.vue";
 import RestaurantInfo from "./RestaurantInfo.vue";
+import MenuTabs from "./MenuTabs.vue";
 export default {
   components: {
-    TabBarFooterView,
     RestaurantInfo,
+    MenuTabs,
   },
 };
 </script>

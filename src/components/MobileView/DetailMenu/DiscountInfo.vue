@@ -1,5 +1,5 @@
 <template>
-  <div class="discount-info text-left p-4">
+  <div class="discount-info text-left py-4">
     <h2 class="my-2 text-base font-semibold">Discount for you</h2>
     <div class="h-17 overflow-x-scroll overflow-y-hidden whitespace-nowrap">
       <div

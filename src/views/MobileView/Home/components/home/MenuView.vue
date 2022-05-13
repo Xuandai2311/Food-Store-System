@@ -9,7 +9,7 @@
               src="@/assets/images/backgroundmenufood.png"
               alt="Background Menu Food"
             />
-            <router-link to="/home/menu" tag="button">
+            <router-link to="/home/menu_food" tag="button">
               <h2 class="absolute text-white font-bold text-4xl top-20 left-17">
                 Menu Đồ Ăn
               </h2>
