@@ -3,7 +3,15 @@
     <div class="main-container">
       <app-main />
     </div>
-    <bottom-navigation-bar class="fixed bottom-0 w-full shadow-5xl" />
+    <bottom-navigation-bar class="fixed bottom-0 w-full shadow-5xl z-9999" />
+    <el-badge :value="12" class="item fixed bottom-40 right-17" type="success">
+      <img
+        class="fixed right-4 bottom-28"
+        src="@/assets/images/icon/Cart.png"
+        alt="Cart"
+        @click="handleClick"
+      />
+    </el-badge>
   </div>
 </template>
 
@@ -16,13 +24,11 @@ export default {
     AppMain,
     BottomNavigationBar,
   },
-  computed: {
-    sidebar() {
-      return this.$store.state.app.sidebar;
-    },
-    device() {
-      return this.$store.state.app.device;
+  methods: {
+    handleClick() {
+      return this.$router.push("/order/cart");
     },
   },
 };
 </script>
+<style></style>

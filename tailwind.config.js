@@ -39,8 +39,10 @@ module.exports = {
       height: {
         100: "100vh",
         content: "calc(100vh - 25vh)",
+        132: "8.25rem",
       },
       width: {
+        182: "11.375rem",
         "3/10": "30%",
       },
       spacing: {
@@ -48,6 +50,9 @@ module.exports = {
       },
       fontFamily: {
         walsheim: "GT Walsheim",
+      },
+      zIndex: {
+        9999: "9999",
       },
     },
   },

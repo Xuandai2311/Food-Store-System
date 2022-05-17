@@ -3,8 +3,11 @@
     <el-tabs v-model="activeName">
       <el-tab-pane label="Sale" name="sale">
         <sale-menu-variants />
+        <list-menu-detail />
       </el-tab-pane>
-      <el-tab-pane label="Bánh Mì" name="banhmi">bánh mì</el-tab-pane>
+      <el-tab-pane label="Bánh Mì" name="banhmi">
+        <list-menu-detail />
+      </el-tab-pane>
       <el-tab-pane label="Cơm" name="com">cơm</el-tab-pane>
       <el-tab-pane label="Pizza" name="pizza">pizza</el-tab-pane>
       <el-tab-pane label="Fast Food" name="fastfood">User</el-tab-pane>
@@ -13,8 +16,9 @@
 </template>
 <script>
 import SaleMenuVariants from "@/components/MobileView/Menu/SaleMenuVariants.vue";
+import ListMenuDetail from "@/components/MobileView/Menu/ListMenuDetail.vue";
 export default {
-  components: { SaleMenuVariants },
+  components: { SaleMenuVariants, ListMenuDetail },
   data() {
     return {
       activeName: "sale",
