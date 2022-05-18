@@ -1,32 +1,51 @@
 <template>
-  <div>
+  <div class="sm:hidden">
     <div class="main-container">
       <app-main />
     </div>
     <bottom-navigation-bar class="fixed bottom-0 w-full shadow-5xl z-9999" />
-    <el-badge :value="12" class="item fixed bottom-40 right-17" type="success">
+    <div v-if="$route.path != '/order/cart'">
+      <el-badge
+        v-if="cartAmount > 0"
+        :value="cartAmount"
+        class="item fixed bottom-36 right-14 z-10"
+        type="success"
+      ></el-badge>
       <img
         class="fixed right-4 bottom-28"
         src="@/assets/images/icon/Cart.png"
         alt="Cart"
-        @click="handleClick"
+        @click="handleClick()"
       />
-    </el-badge>
+    </div>
   </div>
 </template>
 
 <script>
 import AppMain from "./components/AppMain.vue";
 import BottomNavigationBar from "@/layout/MobileView/components/BottomNavigationBar/BottomNavigationBar.vue";
+import { mapGetters } from "vuex";
 export default {
   name: "Layout",
   components: {
     AppMain,
     BottomNavigationBar,
   },
+  // data() {
+  //   return {
+  //     param: this.$router.path(/order/cart)
+  //   }
+  // },
+  computed: { ...mapGetters(["cartAmount"]) },
   methods: {
     handleClick() {
-      return this.$router.push("/order/cart");
+      let path;
+      if (this.cartAmount > 0) {
+        path = "/order/cart";
+      } else {
+        path = "/order";
+      }
+      return this.$router.push(path);
     },
   },
 };

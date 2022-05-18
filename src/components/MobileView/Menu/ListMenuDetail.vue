@@ -3,7 +3,7 @@
     <h2 class="my-3 text-lg font-semibold text-left">
       Bánh Mì ({{ banhMi.length }})
     </h2>
-    <item-base :banhMi="banhMi" />
+    <item-base v-for="item in banhMi" :item="item" :key="item.id" />
   </div>
 </template>
 <script>

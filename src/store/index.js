@@ -5,6 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    listProduct: [],
     hotItem: [
       {
         id: 1,
@@ -96,10 +97,16 @@ export default new Vuex.Store({
   getters: {
     hotItem: (state) => state.hotItem,
     banhMi: (state) => state.banhMi,
+    cart: (state) => state.cart,
+    cartAmount: (state) => state.cart.length,
   },
   mutations: {
-    PUSH_ITEM_TO_CART: (state, cart) => {
-      state.banhMi = cart;
+    PUSH_ITEM_TO_CART: (state, banhMi) => {
+      //  //find the product in the products list
+      // let product = state.products.find((product) => product.id === productId);
+      // //find the product in the cart list
+      // let cartProduct = state.cart.find((product) => product.id === productId);
+      state.cart.push(banhMi);
     },
   },
   actions: {},

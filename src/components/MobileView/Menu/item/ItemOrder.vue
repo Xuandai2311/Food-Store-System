@@ -1,9 +1,10 @@
 <template>
   <div class="HotItem">
-    <div class="my-4 flex items-center border rounded-xl border-gray">
+    <div
+      class="my-4 flex items-center justify-between border rounded-xl border-gray"
+    >
       <div class="p-3 text-left">
         <h2 class="text-base font-semibold">{{ item.title }}</h2>
-        <p class>{{ item.descriptions }}</p>
         <div class="flex py-2">
           <p class="text-base font-semibold text-gray line-through">
             {{ item.cost }} đ
@@ -12,14 +13,7 @@
             {{ item.priceSale }} đ
           </p>
         </div>
-        <el-button
-          v-if="!isHidden"
-          class="btn w-36 border-red-base text-red-base"
-          round
-          @click="handleClickAdd(item)"
-          >Add</el-button
-        >
-        <div class="flex items-center" v-if="isHidden">
+        <div class="flex items-center">
           <el-button
             class="text-red-base text-base leading-none"
             icon="el-icon-minus"
@@ -31,45 +25,53 @@
             icon="el-icon-plus"
             circle
           ></el-button>
+          <el-button @click="drawer = true" round class="btn_note"
+            >Ghi chú</el-button
+          >
         </div>
-        <img
-          class="absolute top-2 float-right right-3"
-          src="@/assets/images/favorite.svg"
-          alt="Favorite"
-        />
       </div>
       <img
-        class="rounded-xl w-28 h-28 mx-3"
+        class="rounded-xl w-28 h-28 m-3"
         :src="getImgUrl(item.img)"
         :alt="item.title"
       />
     </div>
+    <el-drawer
+      title="Ghi chú món ăn"
+      :visible.sync="drawer"
+      :direction="direction"
+      size="50%"
+    >
+      <el-input class="w-4/5" type="textarea" v-model="note"></el-input>
+      <el-button round>Xong</el-button>
+    </el-drawer>
   </div>
 </template>
 <script>
 export default {
-  data() {
-    return {
-      isHidden: false,
-    };
-  },
   props: {
     item: {
       type: Object,
       require: true,
     },
   },
+  data() {
+    return {
+      drawer: false,
+      direction: "btt",
+    };
+  },
   methods: {
     getImgUrl(icon) {
       let images = require.context("@/assets/images/", false, /\.png$/);
       return images("./" + icon + ".png");
     },
-    handleClickAdd(item) {
-      this.isHidden = true;
-      this.$store.commit("PUSH_ITEM_TO_CART", item);
-      console.log(item.id);
-      return this.isHidden;
-    },
+    // handleClickAdd(item) {
+    //   this.isHidden = true;
+    //   this.$store.commit("PUSH_ITEM_TO_CART", item);
+    //   console.log(item.id);
+    //   return this.isHidden;
+    // },
   },
 };
 </script>
@@ -110,5 +112,10 @@ export default {
 }
 .el-button.is-circle {
   padding: 4px;
+}
+.btn_note {
+  .el-button.is-round {
+    padding: 5px 10px;
+  }
 }
 </style>

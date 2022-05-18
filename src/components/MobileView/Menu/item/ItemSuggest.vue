@@ -1,6 +1,8 @@
 <template>
   <div class="HotItem">
-    <div class="my-4 flex items-center border rounded-xl border-gray">
+    <div
+      class="my-4 w-80 inline-flex items-center justify-between border rounded-xl border-gray"
+    >
       <div class="p-3 text-left">
         <h2 class="text-base font-semibold">{{ item.title }}</h2>
         <p class>{{ item.descriptions }}</p>
@@ -13,33 +15,14 @@
           </p>
         </div>
         <el-button
-          v-if="!isHidden"
           class="btn w-36 border-red-base text-red-base"
           round
           @click="handleClickAdd(item)"
           >Add</el-button
         >
-        <div class="flex items-center" v-if="isHidden">
-          <el-button
-            class="text-red-base text-base leading-none"
-            icon="el-icon-minus"
-            circle
-          ></el-button>
-          <p class="px-3 text-base font-bold">2</p>
-          <el-button
-            class="text-red-base text-base leading-none"
-            icon="el-icon-plus"
-            circle
-          ></el-button>
-        </div>
-        <img
-          class="absolute top-2 float-right right-3"
-          src="@/assets/images/favorite.svg"
-          alt="Favorite"
-        />
       </div>
       <img
-        class="rounded-xl w-28 h-28 mx-3"
+        class="rounded-xl w-28 h-28 m-3"
         :src="getImgUrl(item.img)"
         :alt="item.title"
       />
@@ -48,11 +31,6 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      isHidden: false,
-    };
-  },
   props: {
     item: {
       type: Object,
@@ -65,10 +43,8 @@ export default {
       return images("./" + icon + ".png");
     },
     handleClickAdd(item) {
-      this.isHidden = true;
       this.$store.commit("PUSH_ITEM_TO_CART", item);
       console.log(item.id);
-      return this.isHidden;
     },
   },
 };
