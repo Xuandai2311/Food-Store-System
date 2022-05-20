@@ -11,8 +11,8 @@
   </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
 import ItemBase from "@/components/MobileView/Menu/item/ItemBase.vue";
+import { mapGetters } from "vuex";
 export default {
   props: {
     categoriesActive: {
