@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="Order_Detail">
     <div
       class="header fixed w-full bg-white z-10 py-3 border-b-2 border-gray shadow-sm"
     >
       <div class="background-header flex justify-between mx-4">
-        <div class="text-left flex gap-6">
+        <div class="text-left flex gap-6 items-center">
           <router-link to="/home/menu_food" tag="button" class>
             <img src="@/assets/images/backbtn.svg" alt="Back Home" />
           </router-link>
@@ -42,15 +42,15 @@
       >
         <item-suggest
           class="ml-4"
-          v-for="item in hotItem"
-          :item="item"
+          v-for="item in productsBySale"
           :key="item.id"
+          :item="item"
         />
       </div>
       <div class="pay_info mx-4 my-4 border-t border-gray">
         <div class="flex justify-between border-b border-gray px-4 py-2">
           <p>Tổng: {{ cartAmount }} phần</p>
-          <p>15.000đ</p>
+          <p>{{ cartTotalAmount | formatMoney }} đ</p>
         </div>
         <div class="flex justify-between border-b border-gray px-4 py-2">
           <p>Phí giao hàng: 1.4km</p>
@@ -60,9 +60,11 @@
           <p class="font-bold">Tổng cộng</p>
           <p class="font-bold text-red-base">30.000đ</p>
         </div>
-        <p class="text-right py-2">Đã bao gồm thuế.</p>
-        <div class="mt-3 flex justify-between items-center">
-          <div class="flex">
+        <p class="text-right pb-2">Đã bao gồm thuế.</p>
+        <div
+          class="mt-3 flex justify-between items-center border-b border-gray px-4 py-2"
+        >
+          <div class="flex gap-3">
             <img src="@/assets/images/icon/discount.png" alt="Discount" />
             <p>Khuyến mãi</p>
           </div>
@@ -71,6 +73,29 @@
             <img src="@/assets/images/icon/see_more.png" alt="See More" />
           </div>
         </div>
+        <div
+          class="flex items-center justify-between border-b border-gray px-4 py-2"
+        >
+          <div class="flex items-center gap-4">
+            <img src="@/assets/images/icon/coins.png" alt="Coins" />
+            <p>Dùng 10.000 Xu</p>
+          </div>
+          <div class="flex gap-3">
+            <p class="text-grayDark">[-10.000đ]</p>
+            <el-switch v-model="switchCoins" active-color="#E94B64"></el-switch>
+          </div>
+        </div>
+        <div class="my-4">
+          <el-radio-group v-model="pay">
+            <el-radio-button label="Ví điện tử"></el-radio-button>
+            <el-radio-button label="Tiền mặt"></el-radio-button>
+          </el-radio-group>
+        </div>
+        <el-button
+          class="btn_order bg-red-base text-white text-base leading-3 font-semibold w-full mb-5"
+          round
+          >Đặt đơn</el-button
+        >
       </div>
     </div>
   </div>
@@ -82,6 +107,53 @@ import ItemOrder from "@/components/MobileView/Menu/item/ItemOrder.vue";
 import ItemSuggest from "@/components/MobileView/Menu/item/ItemSuggest.vue";
 export default {
   components: { DeliveryInfo, ItemSuggest, ItemOrder },
-  computed: { ...mapGetters(["cart", "hotItem", "cartAmount"]) },
+  computed: {
+    ...mapGetters(["cart", "cartAmount", "Products", "cartTotalAmount"]),
+    productsBySale() {
+      const groups = [];
+      this.Products.forEach((item) => {
+        if (item.sale === "sale") {
+          groups.push(item);
+        }
+      });
+      return groups;
+    },
+  },
+  data() {
+    return {
+      switchCoins: false,
+      pay: "Ví điện tử",
+    };
+  },
 };
 </script>
+<style lang="scss">
+.Order_Detail {
+  .el-radio-button {
+    margin: 0 0.5rem;
+  }
+  .el-radio-button:last-child .el-radio-button__inner {
+    border-radius: 0.25rem;
+    box-shadow: none !important;
+    border-left: 1px solid #dcdfe6;
+  }
+  .el-radio-button:first-child .el-radio-button__inner {
+    border-radius: 0.25rem;
+    box-shadow: none !important;
+  }
+  .el-radio-button__inner {
+    padding: 0.75rem 2.9rem;
+  }
+  .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+    border: 1px solid theme("colors.red-base");
+    color: theme("colors.red-base");
+    background-color: theme("colors.white");
+    border-color: theme("colors.red-base");
+  }
+  .btn_order {
+    .el-button.is-round {
+      padding: 10px 10px;
+    }
+  }
+}
+</style>

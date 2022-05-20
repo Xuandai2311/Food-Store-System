@@ -1,5 +1,5 @@
 <template>
-  <div class="HotItem">
+  <div class="Item_Order">
     <div
       class="my-4 flex items-center justify-between border rounded-xl border-gray"
     >
@@ -17,17 +17,18 @@
           <el-button
             class="text-red-base text-base leading-none"
             icon="el-icon-minus"
+            :disabled="quantityItemInCart === 1"
+            @click="handleClickRemove(item.id)"
             circle
           ></el-button>
-          <p class="px-3 text-base font-bold">2</p>
+          <p class="px-3 text-base font-bold">{{ quantityItemInCart }}</p>
           <el-button
             class="text-red-base text-base leading-none"
             icon="el-icon-plus"
+            @click="handleClickAdd(item.id)"
             circle
           ></el-button>
-          <el-button @click="drawer = true" round class="btn_note"
-            >Ghi chú</el-button
-          >
+          <el-button @click="drawer = true" round>Ghi chú</el-button>
         </div>
       </div>
       <img
@@ -48,6 +49,7 @@
   </div>
 </template>
 <script>
+import { mapGetters } from "vuex";
 export default {
   props: {
     item: {
@@ -59,63 +61,40 @@ export default {
     return {
       drawer: false,
       direction: "btt",
+      note: "",
     };
+  },
+  computed: {
+    ...mapGetters(["cart"]),
+    quantityItemInCart() {
+      let quantityItemInCart = "";
+      this.cart.find((cart) => {
+        if (cart.id === this.item.id) {
+          quantityItemInCart = cart.quantity;
+        }
+      });
+      return quantityItemInCart;
+    },
   },
   methods: {
     getImgUrl(icon) {
       let images = require.context("@/assets/images/", false, /\.png$/);
       return images("./" + icon + ".png");
     },
-    // handleClickAdd(item) {
-    //   this.isHidden = true;
-    //   this.$store.commit("PUSH_ITEM_TO_CART", item);
-    //   console.log(item.id);
-    //   return this.isHidden;
-    // },
+    handleClickAdd(id) {
+      this.$store.commit("PUSH_PRODUCT_TO_CART", id);
+      return this.isHidden;
+    },
+    handleClickRemove(id) {
+      this.$store.commit("REMOVE_PRODUCT_FROM_CART", id);
+    },
   },
 };
 </script>
 <style lang="scss">
-.el-button:focus,
-.el-button:hover {
-  color: theme("colors.red-base");
-  border-color: theme("colors.red-base");
-  background-color: white;
-}
-.btn {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
-}
-.el-input-number__decrease,
-.el-input-number__increase {
-  color: theme("colors.red-base");
-  background: theme("colors.bgHome");
-  border: 2px solid theme("colors.gray");
-  border-radius: 9999px;
-  font-size: 18px;
-  top: 0;
-}
-.el-input-number__decrease {
-  left: 0.5rem;
-}
-.el-input-number__increase {
-  right: 0.5rem;
-}
-.el-input__inner {
-  background-color: theme("colors.bgHome");
-  border: none;
-  font-size: 18px;
-  font-weight: 700;
-}
-.el-input-number {
-  width: 8rem;
-}
-.el-button.is-circle {
-  padding: 4px;
-}
-.btn_note {
+.Item_Order {
   .el-button.is-round {
-    padding: 5px 10px;
+    padding: 0.313rem 0.625rem;
   }
 }
 </style>

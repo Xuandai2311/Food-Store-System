@@ -24,7 +24,7 @@
 export default {
   props: {
     DiscountInfo: {
-      type: Object,
+      type: Array,
       require: true,
     },
   },

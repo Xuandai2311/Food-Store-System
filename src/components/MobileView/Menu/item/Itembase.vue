@@ -5,7 +5,10 @@
         <h2 class="text-base font-semibold">{{ item.title }}</h2>
         <p class>{{ item.descriptions }}</p>
         <div class="flex py-2">
-          <p class="text-base font-semibold text-gray line-through">
+          <p
+            v-if="item.cost"
+            class="text-base font-semibold text-gray line-through"
+          >
             {{ item.cost }} đ
           </p>
           <p class="text-base font-semibold pl-2 text-red-base">
@@ -16,30 +19,33 @@
           v-if="!isHidden"
           class="btn w-36 border-red-base text-red-base"
           round
-          @click="handleClickAdd(item)"
+          @click="handleClickAdd(item.id)"
           >Add</el-button
         >
         <div class="flex items-center" v-if="isHidden">
           <el-button
             class="text-red-base text-base leading-none"
             icon="el-icon-minus"
+            :disabled="quantityItemInCart === 1"
             circle
+            @click="handleClickRemove(item.id)"
           ></el-button>
-          <p class="px-3 text-base font-bold">2</p>
+          <p class="px-3 text-base font-bold">{{ quantityItemInCart }}</p>
           <el-button
             class="text-red-base text-base leading-none"
             icon="el-icon-plus"
             circle
+            @click="handleClickAdd(item.id)"
           ></el-button>
         </div>
-        <img
+        <!-- <img
           class="absolute top-2 float-right right-3"
           src="@/assets/images/favorite.svg"
           alt="Favorite"
-        />
+        />-->
       </div>
       <img
-        class="rounded-xl w-28 h-28 mx-3"
+        class="rounded-xl object-contain w-28 h-28 mx-3"
         :src="getImgUrl(item.img)"
         :alt="item.title"
       />
@@ -47,6 +53,7 @@
   </div>
 </template>
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -59,16 +66,30 @@ export default {
       require: true,
     },
   },
+  computed: {
+    ...mapGetters(["cart"]),
+    quantityItemInCart() {
+      let quantityItemInCart = "";
+      this.cart.find((cart) => {
+        if (cart.id === this.item.id) {
+          quantityItemInCart = cart.quantity;
+        }
+      });
+      return quantityItemInCart;
+    },
+  },
   methods: {
     getImgUrl(icon) {
       let images = require.context("@/assets/images/", false, /\.png$/);
       return images("./" + icon + ".png");
     },
-    handleClickAdd(item) {
+    handleClickAdd(id) {
       this.isHidden = true;
-      this.$store.commit("PUSH_ITEM_TO_CART", item);
-      console.log(item.id);
+      this.$store.commit("PUSH_PRODUCT_TO_CART", id);
       return this.isHidden;
+    },
+    handleClickRemove(id) {
+      this.$store.commit("REMOVE_PRODUCT_FROM_CART", id);
     },
   },
 };

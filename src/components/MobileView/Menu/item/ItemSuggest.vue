@@ -5,7 +5,6 @@
     >
       <div class="p-3 text-left">
         <h2 class="text-base font-semibold">{{ item.title }}</h2>
-        <p class>{{ item.descriptions }}</p>
         <div class="flex py-2">
           <p class="text-base font-semibold text-gray line-through">
             {{ item.cost }} đ
@@ -17,7 +16,7 @@
         <el-button
           class="btn w-36 border-red-base text-red-base"
           round
-          @click="handleClickAdd(item)"
+          @click="handleClickAdd(item.id)"
           >Add</el-button
         >
       </div>
@@ -42,49 +41,10 @@ export default {
       let images = require.context("@/assets/images/", false, /\.png$/);
       return images("./" + icon + ".png");
     },
-    handleClickAdd(item) {
-      this.$store.commit("PUSH_ITEM_TO_CART", item);
-      console.log(item.id);
+    handleClickAdd(id) {
+      this.$store.commit("PUSH_PRODUCT_TO_CART", id);
     },
   },
 };
 </script>
-<style lang="scss">
-.el-button:focus,
-.el-button:hover {
-  color: theme("colors.red-base");
-  border-color: theme("colors.red-base");
-  background-color: white;
-}
-.btn {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
-}
-.el-input-number__decrease,
-.el-input-number__increase {
-  color: theme("colors.red-base");
-  background: theme("colors.bgHome");
-  border: 2px solid theme("colors.gray");
-  border-radius: 9999px;
-  font-size: 18px;
-  top: 0;
-}
-.el-input-number__decrease {
-  left: 0.5rem;
-}
-.el-input-number__increase {
-  right: 0.5rem;
-}
-.el-input__inner {
-  background-color: theme("colors.bgHome");
-  border: none;
-  font-size: 18px;
-  font-weight: 700;
-}
-.el-input-number {
-  width: 8rem;
-}
-.el-button.is-circle {
-  padding: 4px;
-}
-</style>
+<style lang="scss"></style>

@@ -37,7 +37,6 @@ export default {
   computed: {
     activeMenu() {
       const activeMenu = this.$route.name;
-      console.log(activeMenu);
       return activeMenu;
     },
   },

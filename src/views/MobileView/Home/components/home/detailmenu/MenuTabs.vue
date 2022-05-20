@@ -1,30 +1,38 @@
 <template>
   <div class="menufood_tabs">
-    <el-tabs v-model="activeName">
-      <el-tab-pane label="Sale" name="sale">
-        <sale-menu-variants />
-        <list-menu-detail />
-      </el-tab-pane>
-      <el-tab-pane label="Bánh Mì" name="banhmi">
-        <list-menu-detail />
-      </el-tab-pane>
-      <el-tab-pane label="Cơm" name="com">cơm</el-tab-pane>
-      <el-tab-pane label="Pizza" name="pizza">pizza</el-tab-pane>
-      <el-tab-pane label="Fast Food" name="fastfood">User</el-tab-pane>
-    </el-tabs>
+    <div>
+      <el-tabs v-model="activeName">
+        <el-tab-pane label="Bánh Mì" name="banhmi">
+          <sale-menu-variants />
+          <list-menu-detail :categoriesActive="activeName" />
+        </el-tab-pane>
+        <el-tab-pane label="Cơm" name="com">
+          <sale-menu-variants />
+          <list-menu-detail :categoriesActive="activeName" />
+        </el-tab-pane>
+        <el-tab-pane label="Pizza" name="pizza">
+          <sale-menu-variants />
+          <list-menu-detail :categoriesActive="activeName" />
+        </el-tab-pane>
+        <el-tab-pane label="Fast Food" name="fastfood">
+          <sale-menu-variants />
+          <list-menu-detail :categoriesActive="activeName" />
+        </el-tab-pane>
+      </el-tabs>
+    </div>
   </div>
 </template>
 <script>
 import SaleMenuVariants from "@/components/MobileView/Menu/SaleMenuVariants.vue";
 import ListMenuDetail from "@/components/MobileView/Menu/ListMenuDetail.vue";
+// import { mapGetters } from "vuex";
 export default {
   components: { SaleMenuVariants, ListMenuDetail },
   data() {
     return {
-      activeName: "sale",
+      activeName: "banhmi",
     };
   },
-  methods: {},
 };
 </script>
 <style lang="scss">
