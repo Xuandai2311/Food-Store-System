@@ -3,24 +3,24 @@
     <h2 class="my-3 text-lg font-semibold text-left">
       {{ titleCategorieAcitve }}
     </h2>
-    <!-- <item-base
+    <item-main
       v-for="item in productsByCategorie"
       :key="item.id"
       :item="item"
-    /> -->
+    />
   </div>
 </template>
 <script>
-// import ItemBase from "@/components/MobileView/Menu/item/ItemBase.vue";
 import { mapGetters } from "vuex";
+import ItemMain from "@/components/MobileView/Menu/item/ItemMain.vue";
 export default {
+  components: { ItemMain },
   props: {
     categoriesActive: {
       type: String,
       require: true,
     },
   },
-  // components: { ItemBase },
   computed: {
     ...mapGetters(["Products", "categories"]),
     productsByCategorie() {
