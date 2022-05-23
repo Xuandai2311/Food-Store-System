@@ -3,7 +3,7 @@
     <footer class="LayoutDefault__footer">
       <el-menu
         :default-active="activeMenu"
-        class="flex justify-around bottom-0 py-2"
+        class="flex justify-around -bottom-1 pt-2 pb-3"
       >
         <el-menu-item index="Home">
           <i class="icon el-icon-s-home"></i>

@@ -6,11 +6,14 @@
       <div class="p-3 text-left">
         <h2 class="text-base font-semibold">{{ item.title }}</h2>
         <div class="flex py-2">
-          <p class="text-base font-semibold text-gray line-through">
-            {{ item.cost }} đ
+          <p
+            v-if="item.cost"
+            class="text-sm font-semibold text-gray line-through"
+          >
+            {{ item.cost | formatMoney }} đ
           </p>
           <p class="text-base font-semibold pl-2 text-red-base">
-            {{ item.priceSale }} đ
+            {{ item.priceSale | formatMoney }} đ
           </p>
         </div>
         <div class="flex items-center">
@@ -83,6 +86,7 @@ export default {
     },
     handleClickAdd(id) {
       this.$store.commit("PUSH_PRODUCT_TO_CART", id);
+      console.log(id);
       return this.isHidden;
     },
     handleClickRemove(id) {

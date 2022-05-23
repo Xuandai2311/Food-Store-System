@@ -7,12 +7,12 @@
         <div class="flex py-2">
           <p
             v-if="item.cost"
-            class="text-base font-semibold text-gray line-through"
+            class="text-sm font-semibold text-gray line-through"
           >
-            {{ item.cost }} đ
+            {{ item.cost | formatMoney }} đ
           </p>
           <p class="text-base font-semibold pl-2 text-red-base">
-            {{ item.priceSale }} đ
+            {{ item.priceSale | formatMoney }} đ
           </p>
         </div>
         <el-button

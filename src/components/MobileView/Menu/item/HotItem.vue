@@ -16,11 +16,14 @@
       <div class="px-3 text-center">
         <h2 class="text-sm font-semibold">{{ item.title }}</h2>
         <div class="flex">
-          <p class="text-base font-semibold text-gray line-through">
-            {{ item.cost }} đ
+          <p
+            v-if="item.cost"
+            class="text-sm font-semibold text-gray line-through"
+          >
+            {{ item.cost | formatMoney }} đ
           </p>
           <p class="text-base font-semibold pl-2 text-red-base">
-            {{ item.priceSale }} đ
+            {{ item.priceSale | formatMoney }} đ
           </p>
         </div>
         <el-button
