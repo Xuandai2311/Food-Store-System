@@ -71,6 +71,13 @@ const routes = [
     ],
   },
   {
+    path: "/order/Cart/loading",
+    component: () =>
+      import(
+        "@/views/MobileView/Home/components/order/components/LoadingOrder.vue"
+      ),
+  },
+  {
     path: "/",
     component: Layout,
     children: [

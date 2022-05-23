@@ -16,13 +16,6 @@
     </div>
     <div class="location pt-20 py-6">
       <h2 class="mx-4 mb-3 font-bold text-base text-left">Địa Chỉ Giao Hàng</h2>
-      <!-- <div class="my-3 rounded border border-gray bg-grayLight">
-        <div class="p-3">
-          <p>Khoảng cách: 1.2km</p>
-          <p>giao trong 15 phút</p>
-        </div>
-        <router-link class="text-red-base">Thay đổi địa chỉ</router-link>
-      </div>-->
       <delivery-info />
     </div>
     <div class="item_order">
@@ -94,6 +87,7 @@
         <el-button
           class="btn_order bg-red-base text-white text-base leading-3 font-semibold w-full mb-5"
           round
+          @click="handleClickOrder"
           >Đặt đơn</el-button
         >
       </div>
@@ -124,6 +118,13 @@ export default {
       switchCoins: false,
       pay: "Ví điện tử",
     };
+  },
+  methods: {
+    handleClickOrder() {
+      setTimeout(() => {
+        this.$router.push("/order/Cart/loading");
+      }, 700);
+    },
   },
 };
 </script>

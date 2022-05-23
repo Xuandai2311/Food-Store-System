@@ -36,22 +36,20 @@ export default {
 };
 </script>
 <style lang="scss">
-.menufood_tabs {
-  .el-tabs__item {
-    font-size: 16px;
-  }
-  .el-tabs__item.is-active {
-    color: theme("colors.red-base");
-    font-size: 16px;
-  }
-  .el-tabs__active-bar {
-    background-color: theme("colors.red-base");
-  }
-  .el-tabs__nav-wrap::after {
-    background-color: none;
-  }
-  .el-tabs__nav-scroll {
-    overflow: auto;
-  }
+.el-tabs__item {
+  font-size: 16px;
+}
+.el-tabs__item.is-active {
+  color: theme("colors.red-base");
+  font-size: 16px;
+}
+.el-tabs__active-bar {
+  background-color: theme("colors.red-base");
+}
+.el-tabs__nav-wrap::after {
+  background-color: none;
+}
+.el-tabs__nav-scroll {
+  overflow: auto;
 }
 </style>

@@ -131,6 +131,7 @@ export default new Vuex.Store({
       },
     ],
     cart: [],
+    orderList: [],
   },
   getters: {
     Products: (state) => state.Products,
@@ -143,6 +144,7 @@ export default new Vuex.Store({
         return total + item.quantity * item.priceSale;
       }, 0);
     },
+    orderList: (state) => state.orderList,
   },
   mutations: {
     PUSH_PRODUCT_TO_CART: (state, id) => {
@@ -165,6 +167,12 @@ export default new Vuex.Store({
       //find the product in the cart list
       let cartProduct = state.cart.find((product) => product.id === id);
       cartProduct.quantity--;
+    },
+    RESET_CART: (state) => {
+      state.cart = [];
+    },
+    PUSH_TIME: (state, timestamp) => {
+      state.orderList.push(timestamp);
     },
   },
   actions: {},

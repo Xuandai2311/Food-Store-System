@@ -1,5 +1,5 @@
 <template>
-  <div class="home bg-bgHome sm:hidden">
+  <div class="home bg-bgHome">
     <div class="relative mb-16">
       <header-home-view />
       <banner-carousel-view />

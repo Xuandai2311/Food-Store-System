@@ -38,6 +38,9 @@ module.exports = {
         "4xl": "0px 13.4555px 33.6388px rgba(57, 57, 57, 0.1)",
         "5xl": "0px 0px 25px rgba(0, 0, 0, 0.1)",
       },
+      margin: {
+        "33vh": "33vh",
+      },
       height: {
         100: "100vh",
         content: "calc(100vh - 25vh)",
@@ -61,5 +64,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animation-delay")],
 };
