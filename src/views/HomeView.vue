@@ -1,18 +1,15 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <div class="sm:hidden text-red-base">Mobile View</div>
+    <div class="hidden sm:block">web</div>
+    <h2 class="text-red">dá</h2>
+    <login-view />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import LoginView from "@/views/WebView/Login/LoginView.vue";
 export default {
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
+  components: { LoginView },
 };
 </script>

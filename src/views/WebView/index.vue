@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-    <router-view />
+  <div class="app-main">
+    <component :is="layout">
+      <router-view :layout.sync="layout" />
+    </component>
   </div>
 </template>
 
@@ -11,21 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: linear-gradient(
-    111.39deg,
-    #e9f3fd 12.37%,
-    rgba(235, 158, 171, 0.5) 53.12%,
-    #e9f3fd 89.83%
-  );
 }
-
 nav {
   padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;
-
     &.router-link-exact-active {
       color: #42b983;
     }
