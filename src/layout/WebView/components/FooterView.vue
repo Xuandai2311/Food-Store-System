@@ -1,8 +1,10 @@
 <template>
-  <div class="Footer grid grid-cols-4 items-end justify-items-center py-9">
+  <div
+    class="Footer grid sm:grid-cols-3 lg:grid-cols-4 items-end justify-items-center py-9"
+  >
     <div class="col-span-1 text-left">
       <a href="/">
-        <img class="w-36" src="@/assets/images/logo.png" alt="Logo" />
+        <img class="w-36" src="@/assets/images/Web/logo.png" alt="Logo" />
       </a>
       <p class="my-9">
         We cook and deliver the tastiest
@@ -10,17 +12,17 @@
       </p>
       <div class="flex gap-4">
         <a href>
-          <img src="@/assets/images/Facebook.png" alt="Facebook" />
+          <img src="@/assets/images/Web/Facebook.png" alt="Facebook" />
         </a>
         <a href>
-          <img src="@/assets/images/Instagram.png" alt="Instagram" />
+          <img src="@/assets/images/Web/Instagram.png" alt="Instagram" />
         </a>
         <a href>
-          <img src="@/assets/images/Twitter.png" alt="Twitter" />
+          <img src="@/assets/images/Web/Twitter.png" alt="Twitter" />
         </a>
       </div>
     </div>
-    <div class="col-span-2 flex gap-24 text-left">
+    <div class="col-span-2 flex sm:gap-12 lg:gap-24 text-left">
       <div>
         <h2 class="text-lg font-semibold mb-9">About</h2>
         <div class="grid gap-4">
@@ -49,11 +51,11 @@
         </div>
       </div>
     </div>
-    <div class="col-span-1 text-left">
+    <div class="col-span-1 text-left sm:hidden lg:block">
       <h2 class="text-2xl font-semibold">Get In Touch</h2>
       <p class="my-9">
-        question or feedback?
-        <br />we'd love to hear from you
+        Question Or Feedback?
+        <br />We'd Love To Hear From You
       </p>
       <div class="relative">
         <input
@@ -64,7 +66,7 @@
         <button class>
           <img
             class="Send_Img absolute"
-            src="@/assets/images/icon/Send.png"
+            src="@/assets/images/icon/web/Send.png"
             alt="Send"
           />
         </button>

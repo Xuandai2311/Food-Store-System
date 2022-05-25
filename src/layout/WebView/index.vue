@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden sm:block w-container mx-auto">
+  <div class="hidden sm:block container mx-auto">
     <header-view />
     <div class="main-container">
       <app-main />
