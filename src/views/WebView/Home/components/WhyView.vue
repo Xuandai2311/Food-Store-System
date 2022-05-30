@@ -5,12 +5,15 @@
     <div class="flex justify-around">
       <div class="relative mt-60" v-for="item in whyChoice" :key="item.id">
         <img
-          class="images absolute bottom-10 ml-2"
+          :class="`${
+            item.id === 1 ? 'phone' : item.id === 2 ? 'rocket' : 'box'
+          }`"
+          class="absolute bottom-10 ml-2"
           :src="getImgUrl(item.img)"
           :alt="item.img"
         />
         <h2 class="text-3xl font-bold">{{ item.title }}</h2>
-        <p class="w-2/3 mx-auto mt-4">{{ item.describe }}</p>
+        <p class="w-2/3 mx-auto mt-4 text-lg">{{ item.describe }}</p>
       </div>
     </div>
   </div>
@@ -51,7 +54,15 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.images::before {
-  animation: toBottomFromTop 3s forwards infinite;
+@import "@/styles/animation";
+.rocket {
+  animation: toBottomFromTop 4s forwards infinite;
+  transform: rotate(30deg);
+}
+.phone {
+  animation: tada 5s infinite linear;
+}
+.box {
+  animation: smallToBig 3s alternate infinite ease;
 }
 </style>
