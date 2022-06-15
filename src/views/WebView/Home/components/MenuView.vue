@@ -7,28 +7,106 @@
         <br />make you fall in love
       </h2>
     </div>
-    <el-tabs :tab-position="tabPosition" style="height: 200px">
-      <el-tab-pane>
+    <el-tabs :tab-position="tabPosition" v-model="activeName">
+      <el-tab-pane label="Sale" name="sale">
         <span slot="label">
           <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
           Sale
         </span>
-        <item-base />
+        <el-carousel :autoplay="false" :interval="4000" type="card">
+          <el-carousel-item v-for="item in productsBySale" :key="item.id">
+            <div class="flex justify-center">
+              <item-base :item="item" />
+            </div>
+          </el-carousel-item>
+        </el-carousel>
       </el-tab-pane>
-      <el-tab-pane label="Config">Config</el-tab-pane>
-      <el-tab-pane label="Role">Role</el-tab-pane>
-      <el-tab-pane label="Task">Task</el-tab-pane>
+      <el-tab-pane label="Bánh Mì" name="banhmi">
+        <span slot="label">
+          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          Bánh Mì
+        </span>
+        <el-carousel :autoplay="false" :interval="4000" type="card">
+          <el-carousel-item v-for="item in productsByCategorie" :key="item.id">
+            <div class="flex justify-center">
+              <item-base :item="item" />
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </el-tab-pane>
+      <el-tab-pane label="Cơm" name="com">
+        <span slot="label">
+          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          Cơm
+        </span>
+        <el-carousel :autoplay="false" :interval="4000" type="card">
+          <el-carousel-item v-for="item in productsByCategorie" :key="item.id">
+            <div class="flex justify-center">
+              <item-base :item="item" />
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </el-tab-pane>
+      <el-tab-pane label="Pizza" name="pizza">
+        <span slot="label">
+          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          Pizza
+        </span>
+        <el-carousel :autoplay="false" :interval="4000" type="card">
+          <el-carousel-item v-for="item in productsByCategorie" :key="item.id">
+            <div class="flex justify-center">
+              <item-base :item="item" />
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </el-tab-pane>
+      <el-tab-pane label="Fast Food" name="fastfood">
+        <span slot="label">
+          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          Fast Food
+        </span>
+        <el-carousel :autoplay="false" :interval="4000" type="card">
+          <el-carousel-item v-for="item in productsByCategorie" :key="item.id">
+            <div class="flex justify-center">
+              <item-base :item="item" />
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
 <script>
 import ItemBase from "@/components/WebView/ItemBase.vue";
+import { mapGetters } from "vuex";
 export default {
   components: { ItemBase },
   data() {
     return {
       tabPosition: "left",
+      activeName: "sale",
     };
+  },
+  computed: {
+    ...mapGetters(["Products", "categories"]),
+    productsBySale() {
+      const groups = [];
+      this.Products.forEach((item) => {
+        if (item.sale === "sale") {
+          groups.push(item);
+        }
+      });
+      return groups;
+    },
+    productsByCategorie() {
+      const productsByCategorie = [];
+      this.Products.forEach((item) => {
+        if (item.categorie === this.activeName) {
+          productsByCategorie.push(item);
+        }
+      });
+      return productsByCategorie;
+    },
   },
 };
 </script>
@@ -55,6 +133,9 @@ export default {
     margin: 1rem 2rem 1rem 0.5rem;
     font-size: 16px;
     font-weight: 700;
+  }
+  .el-carousel__mask {
+    background: none;
   }
 }
 </style>

@@ -11,7 +11,7 @@
           class="absolute top-2 float-right right-3"
           src="@/assets/images/favorite.svg"
           alt="Favorite"
-        /> -->
+        />-->
       </div>
       <div class="px-3 text-center">
         <h2 class="text-sm font-semibold">{{ item.title }}</h2>
@@ -61,6 +61,10 @@ export default {
       type: Object,
       require: true,
     },
+    categoriesActive: {
+      type: String,
+      require: true,
+    },
   },
   data() {
     return {
@@ -78,10 +82,19 @@ export default {
       });
       return quantityItemInCart;
     },
+    titleCategorieAcitve() {
+      let titleCategorieAcitve = "";
+      this.categories.find((item) => {
+        if (item.name === this.categoriesActive) {
+          titleCategorieAcitve = item.title;
+        }
+      });
+      return titleCategorieAcitve;
+    },
   },
   methods: {
     getImgUrl(icon) {
-      let images = require.context("@/assets/images/", false, /\.png$/);
+      let images = require.context("@/assets/images/Web", false, /\.png$/);
       return images("./" + icon + ".png");
     },
     handleClickAdd(id) {
