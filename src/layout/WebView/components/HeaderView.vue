@@ -1,6 +1,6 @@
 <template>
   <div
-    class="Header mb-16 grid sm:grid-cols-3 lg:grid-cols-4 items-center justify-items-center"
+    class="Header mb-16 grid sm:grid-cols-3 lg:grid-cols-4 items-center justify-items-center fixed w-4/5"
   >
     <a href="/">
       <img
@@ -25,7 +25,21 @@
             alt="Search"
           />
         </button>
-        <button>
+        <el-badge
+          v-if="cartAmount > 0"
+          :value="cartAmount"
+          class="item"
+          type="success"
+        >
+          <button>
+            <img
+              class="bg-violet-base p-4 rounded-2.5xl hover:bg-violet-300"
+              src="@/assets/images/icon/web/Cart.png"
+              alt="Cart"
+            />
+          </button>
+        </el-badge>
+        <button v-else>
           <img
             class="bg-violet-base p-4 rounded-2.5xl hover:bg-violet-300"
             src="@/assets/images/icon/web/Cart.png"
@@ -45,7 +59,10 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+export default {
+  computed: { ...mapGetters(["cartAmount"]) },
+};
 </script>
 
 <style></style>

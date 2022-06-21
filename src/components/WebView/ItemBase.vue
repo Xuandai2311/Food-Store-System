@@ -3,7 +3,7 @@
     <div class="border rounded-xl border-gray text-left inline-block">
       <div class="relative">
         <img
-          class="rounded-t-xl object-cover h-132"
+          class="rounded-t-xl object-cover h-132 min-w-full"
           :src="getImgUrl(item.img)"
           :alt="item.title"
         />

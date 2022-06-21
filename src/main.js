@@ -6,6 +6,10 @@ import ElementUI from "element-ui";
 import locale from "element-ui/lib/locale/lang/en";
 import "element-ui/lib/theme-chalk/index.css";
 import "@/assets/tailwind.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 Vue.config.productionTip = false;
 Vue.use(ElementUI, { locale });
 Vue.use(ElementUI);

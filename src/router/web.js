@@ -17,4 +17,16 @@ export default [
       },
     ],
   },
+  {
+    path: "/",
+    component: Layout,
+    redirect: "/menu",
+    children: [
+      {
+        path: "/menu",
+        name: "Menu",
+        component: () => import("@/views/WebView/Menu"),
+      },
+    ],
+  },
 ];
