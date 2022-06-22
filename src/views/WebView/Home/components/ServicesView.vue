@@ -15,8 +15,12 @@
           data-aos-delay="300"
           data-aos-duration="1000"
         >
-          <img src="@/assets/images/Web/icon/web/discount.svg" alt="Discount" />
-          <p class="my-3 font-bold">Discount system</p>
+          <img
+            class="h-12 w-12"
+            src="@/assets/images/Web/icon/web/discount.svg"
+            alt="Discount"
+          />
+          <p class="my-5 font-bold">Discount system</p>
           <p>Vô số chiết khấu, ưu đãi và giảm giá cho khách hàng</p>
         </div>
         <div
@@ -25,8 +29,12 @@
           data-aos-delay="300"
           data-aos-duration="1000"
         >
-          <img src="@/assets/images/Web/icon/web/delivery.svg" alt="Delivery" />
-          <p class="my-3 font-bold">Delivery</p>
+          <img
+            class="h-12 w-12"
+            src="@/assets/images/Web/icon/web/delivery.svg"
+            alt="Delivery"
+          />
+          <p class="my-5 font-bold">Delivery</p>
           <p>
             Giao hàng nhanh chóng, đảm bảo an toàn và chất lượng món ăn trong
             vòng 45 phút
@@ -39,10 +47,11 @@
           data-aos-duration="1000"
         >
           <img
+            class="h-12 w-12"
             src="@/assets/images/Web/icon/web/restaurant.svg"
             alt="Restaurant"
           />
-          <p class="my-3 font-bold">Restaurant</p>
+          <p class="my-5 font-bold">Restaurant</p>
           <p>Chuỗi 23 nhà hàng có mặt trên các thành phố lớn</p>
         </div>
         <div
@@ -51,8 +60,12 @@
           data-aos-delay="300"
           data-aos-duration="1000"
         >
-          <img src="@/assets/images/Web/icon/web/best.svg" alt="Best Quality" />
-          <p class="my-3 font-bold">Best Quality</p>
+          <img
+            class="h-12 w-12"
+            src="@/assets/images/Web/icon/web/best.svg"
+            alt="Best Quality"
+          />
+          <p class="my-5 font-bold">Best Quality</p>
           <p>Dịnh vụ đẳng cấp, chất lượng 3 sao được kiểm định bởi Michelin</p>
         </div>
       </div>
