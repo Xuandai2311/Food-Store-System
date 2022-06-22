@@ -1,8 +1,11 @@
 <template>
   <div class="Why_Choice">
     <p class="mt-36 mb-4 font-bold text-red-base uppercase">What we serve</p>
-    <h2 class="text-4xl mb-12 font-bold text-black" data-aos="fade-right">
-      Why Choice What2Eat ?
+    <h2
+      class="text-4xl mb-12 font-bold text-black uppercase"
+      data-aos="fade-right"
+    >
+      Lý do chọn What2Eat
     </h2>
     <div class="flex justify-around">
       <div

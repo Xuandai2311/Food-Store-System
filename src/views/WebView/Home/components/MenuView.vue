@@ -3,13 +3,13 @@
     <div class="text-left mb-5">
       <p class="mt-36 mb-4 font-bold text-red-base uppercase">our menu</p>
       <h2
-        class="text-4xl mb-12 font-bold text-black capitalize"
+        class="text-4xl mb-12 font-bold text-black uppercase"
         data-aos="fade-right"
         data-aos-delay="200"
         data-aos-duration="1000"
       >
-        menu that always
-        <br />make you fall in love
+        Thực đơn của chúng tôi
+        <br />sẽ luôn làm bạn hạnh phúc
       </h2>
     </div>
     <div>

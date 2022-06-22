@@ -5,7 +5,7 @@
       class="text-4xl mb-12 font-bold text-black uppercase"
       data-aos="fade-right"
     >
-      service from our services to you
+      Dịch vụ chúng tôi mang đến cho bạn
     </h2>
     <div class="flex justify-center">
       <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">

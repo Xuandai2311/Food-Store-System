@@ -20,7 +20,7 @@
         <div class="flex">
           <p
             v-if="item.cost"
-            class="text-sm font-semibold text-gray line-through"
+            class="text-sm font-semibold text-black line-through"
           >
             {{ item.cost | formatMoney }} đ
           </p>
@@ -35,7 +35,7 @@
           @click="handleClickAdd(item.id)"
           >Add</el-button
         >
-        <div class="my-3 flex items-center" v-if="isHidden">
+        <div class="my-3 flex items-center justify-center" v-if="isHidden">
           <el-button
             class="text-red-base text-base leading-none"
             icon="el-icon-minus"
@@ -110,4 +110,10 @@ export default {
   },
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+.HotItem {
+  .el-button.is-circle {
+    padding: 5px;
+  }
+}
+</style>
