@@ -1,9 +1,11 @@
 <template>
-  <div class="HotItem">
-    <div class="border rounded-xl border-gray text-left inline-block">
+  <div class="HotItem w-182">
+    <div
+      class="border rounded-xl border-gray text-left inline-block shadow-item"
+    >
       <div class="relative">
         <img
-          class="rounded-t-xl object-cover h-132 min-w-full"
+          class="rounded-t-xl object-cover h-132 w-182"
           :src="getImgUrl(item.img)"
           :alt="item.title"
         />
@@ -14,7 +16,7 @@
         />-->
       </div>
       <div class="px-3 text-center">
-        <h2 class="text-sm font-semibold">{{ item.title }}</h2>
+        <h2 class="py-3 text-sm font-semibold">{{ item.title }}</h2>
         <div class="flex">
           <p
             v-if="item.cost"

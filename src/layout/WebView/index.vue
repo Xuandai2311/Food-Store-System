@@ -2,7 +2,7 @@
   <div class="hidden sm:block container mx-auto">
     <header-view />
     <div class="main-container">
-      <app-main />
+      <app-main class="pt-20" />
     </div>
     <footer-view />
   </div>

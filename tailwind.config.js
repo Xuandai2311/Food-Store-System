@@ -39,6 +39,7 @@ module.exports = {
         normal: "0px -1px 4px rgba(196, 196, 196, 0.3);",
         "4xl": "0px 13.4555px 33.6388px rgba(57, 57, 57, 0.1)",
         "5xl": "0px 0px 25px rgba(0, 0, 0, 0.1)",
+        item: "0px 10px 14px 1px rgb(0, 0, 0,  0.1)",
       },
       margin: {
         "33vh": "33vh",
@@ -49,7 +50,7 @@ module.exports = {
         132: "8.25rem",
       },
       width: {
-        182: "11.375rem",
+        182: "13.375rem",
         "3/10": "30%",
         container: "90rem",
       },
