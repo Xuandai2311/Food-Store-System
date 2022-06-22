@@ -9,7 +9,6 @@ import "@/assets/tailwind.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
-AOS.init();
 Vue.config.productionTip = false;
 Vue.use(ElementUI, { locale });
 Vue.use(ElementUI);
@@ -22,6 +21,9 @@ Vue.filter("formatMoney", function (value) {
   }
 });
 new Vue({
+  created() {
+    AOS.init();
+  },
   router,
   store,
   render: (h) => h(App),

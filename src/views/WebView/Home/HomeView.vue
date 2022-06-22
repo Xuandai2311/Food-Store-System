@@ -3,18 +3,17 @@
     <banner-view />
     <why-view />
     <menu-view />
+    <services-view />
   </div>
 </template>
 
 <script>
-import BannerView from "@/views/WebView/Home/components/BannerView.vue";
-import WhyView from "@/views/WebView/Home/components/WhyView.vue";
-import MenuView from "./components/MenuView.vue";
 export default {
   components: {
-    BannerView,
-    WhyView,
-    MenuView,
+    BannerView: () => import("./components/BannerView.vue"),
+    WhyView: () => import("./components/WhyView.vue"),
+    MenuView: () => import("./components/MenuView.vue"),
+    ServicesView: () => import("./components/ServicesView.vue"),
   },
 };
 </script>
