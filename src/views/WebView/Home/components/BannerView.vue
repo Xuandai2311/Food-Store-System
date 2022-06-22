@@ -18,7 +18,7 @@
         Order Now
       </button>
     </div>
-    <div>
+    <div data-aos="fade-left">
       <img src="@/assets/images/Web/Banner_Burger.png" alt="Burger Banner" />
     </div>
   </div>

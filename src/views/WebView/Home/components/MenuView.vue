@@ -1,8 +1,13 @@
 <template>
   <div class="menu mx-28">
-    <div class="text-left">
+    <div class="text-left mb-5">
       <p class="mt-36 mb-4 font-bold text-red-base uppercase">our menu</p>
-      <h2 class="text-4xl mb-12 font-bold text-black capitalize">
+      <h2
+        class="text-4xl mb-12 font-bold text-black capitalize"
+        data-aos="fade-right"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+      >
         menu that always
         <br />make you fall in love
       </h2>

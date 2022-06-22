@@ -1,6 +1,11 @@
 <template>
   <div>
-    <h2 class="text-3xl mb-12 font-bold text-red-base uppercase">Menu Drink</h2>
+    <h2
+      class="text-left mb-4 font-bold text-red-base uppercase"
+      data-aos="zoom-in-up"
+    >
+      Menu Drink
+    </h2>
     <el-tabs :tab-position="tabPosition" v-model="activeName">
       <el-tab-pane label="Sale" name="sale">
         <span slot="label">
@@ -9,7 +14,12 @@
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
           <el-carousel-item v-for="item in productsBySale" :key="item.id">
-            <div class="flex justify-center">
+            <div
+              class="flex justify-center"
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
               <item-base :item="item" />
             </div>
           </el-carousel-item>
@@ -22,7 +32,12 @@
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
           <el-carousel-item v-for="item in productsByCategorie" :key="item.id">
-            <div class="flex justify-center">
+            <div
+              class="flex justify-center"
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
               <item-base :item="item" />
             </div>
           </el-carousel-item>
@@ -35,7 +50,12 @@
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
           <el-carousel-item v-for="item in productsByCategorie" :key="item.id">
-            <div class="flex justify-center">
+            <div
+              class="flex justify-center"
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
               <item-base :item="item" />
             </div>
           </el-carousel-item>
@@ -48,7 +68,12 @@
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
           <el-carousel-item v-for="item in productsByCategorie" :key="item.id">
-            <div class="flex justify-center">
+            <div
+              class="flex justify-center"
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
               <item-base :item="item" />
             </div>
           </el-carousel-item>
@@ -61,7 +86,12 @@
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
           <el-carousel-item v-for="item in productsByCategorie" :key="item.id">
-            <div class="flex justify-center">
+            <div
+              class="flex justify-center"
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
               <item-base :item="item" />
             </div>
           </el-carousel-item>
