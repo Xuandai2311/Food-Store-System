@@ -1,10 +1,13 @@
 <template>
   <div class="services">
     <p class="mt-36 mb-4 font-bold text-red-base uppercase">Services</p>
-    <h2 class="text-4xl mb-12 font-bold text-black" data-aos="fade-right">
+    <h2
+      class="text-4xl mb-12 font-bold text-black uppercase"
+      data-aos="fade-right"
+    >
       service from our services to you
     </h2>
-    <div class="flex">
+    <div class="flex justify-center">
       <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
         <img src="@/assets/images/Web/services1.png" alt="services" />
       </div>
