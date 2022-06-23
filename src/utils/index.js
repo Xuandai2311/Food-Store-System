@@ -32,6 +32,10 @@ export function getImgIconWebSvg(icon) {
   let images = require.context("@/assets/images/Web/icon/web", false, /\.svg$/);
   return images("./" + icon + ".svg");
 }
+export function getImgWebPng(img) {
+  let images = require.context("@/assets/images/Web", false, /\.png$/);
+  return images("./" + img + ".png");
+}
 
 export function formatPrice(value) {
   const val = (value / 1).toFixed(0).replace(".", ",");

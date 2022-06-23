@@ -4,6 +4,7 @@
     <why-view />
     <menu-view />
     <services-view />
+    <feedback-view />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ export default {
     WhyView: () => import("./components/WhyView.vue"),
     MenuView: () => import("./components/MenuView.vue"),
     ServicesView: () => import("./components/ServicesView.vue"),
+    FeedbackView: () => import("./components/FeedbackView.vue"),
   },
 };
 </script>
