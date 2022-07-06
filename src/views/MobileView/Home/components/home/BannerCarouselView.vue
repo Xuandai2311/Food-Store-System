@@ -6,7 +6,7 @@
         :key="item.id"
         class="rounded-lg"
       >
-        <div class="relative">
+        <div class="relative" @click="handleClickGoToDeveloping">
           <h2 class="absolute font-semibold text-xl text-white top-14 left-6">
             {{ item.title }}
           </h2>
@@ -51,6 +51,9 @@ export default {
     getImgUrl(img) {
       let images = require.context("@/assets/images/", false, /\.png$/);
       return images("./" + img + ".png");
+    },
+    handleClickGoToDeveloping() {
+      this.$router.push({ path: "/developing" });
     },
   },
 };

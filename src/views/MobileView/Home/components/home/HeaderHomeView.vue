@@ -9,20 +9,25 @@
             >Địa chỉ hiện tại</span
           >
           <router-link
-            to=""
+            to="/developing"
             tag="button"
             class="truncate font-semibold text-base text-white"
-            >Trường Đại Học Kinh Doanh Và Công Nghệ Hà Nội </router-link
-          ><i class="el-icon-arrow-down text-white font-medium"></i>
+            >Trường Đại Học Kinh Doanh Và Công Nghệ Hà Nội</router-link
+          >
+          <i class="el-icon-arrow-down text-white font-medium"></i>
         </div>
-        <i class="el-icon-bell text-white font-medium text-xl"></i>
+        <i
+          @click="handleClickGoToDeveloping"
+          class="el-icon-bell text-white font-medium text-xl"
+        ></i>
       </div>
       <el-input
         placeholder="Hôm nay bạn muốn ăn gì nào ?"
         v-model="input"
         class="w-5/6 mx-auto"
-        ><i slot="prefix" class="el-input__icon el-icon-search"></i
-      ></el-input>
+      >
+        <i slot="prefix" class="el-input__icon el-icon-search"></i>
+      </el-input>
     </div>
   </div>
 </template>
@@ -33,6 +38,11 @@ export default {
     return {
       input: "",
     };
+  },
+  methods: {
+    handleClickGoToDeveloping() {
+      this.$router.push({ path: "/developing" });
+    },
   },
 };
 </script>

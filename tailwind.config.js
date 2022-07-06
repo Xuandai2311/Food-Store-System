@@ -45,6 +45,7 @@ module.exports = {
         100: "100vh",
         content: "calc(100vh - 25vh)",
         132: "8.25rem",
+        184.5: "11.531rem",
       },
       width: {
         182: "11.375rem",
@@ -59,10 +60,16 @@ module.exports = {
       zIndex: {
         9999: "9999",
       },
+      backgroundImage: {
+        "header-profile": "url('/src/images/bg-header-profile.png)",
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require("tailwindcss-animation-delay")],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+    // ...
+  ],
 };

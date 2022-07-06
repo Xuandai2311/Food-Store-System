@@ -23,6 +23,18 @@ const routes = [
   {
     path: "/",
     component: Layout,
+    redirect: "/developing",
+    children: [
+      {
+        path: "/developing",
+        name: "Developing",
+        component: () => import("@/views/MobileView/DevelopView.vue"),
+      },
+    ],
+  },
+  {
+    path: "/",
+    component: Layout,
     redirect: "/home",
     children: [
       {
@@ -98,6 +110,20 @@ const routes = [
         name: "Profile",
         component: () =>
           import("@/views/MobileView/Home/components/profile/ProfileView.vue"),
+      },
+    ],
+  },
+  {
+    path: "/profile",
+    component: Layout,
+    children: [
+      {
+        path: "/profile/edit-profile",
+        name: "Profile",
+        component: () =>
+          import(
+            "@/views/MobileView/Home/components/profile/components/EditProfile.vue"
+          ),
       },
     ],
   },

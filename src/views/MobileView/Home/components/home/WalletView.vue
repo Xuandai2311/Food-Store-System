@@ -1,7 +1,12 @@
 <template>
   <div class="wallet bg-white">
     <div class="divide-x-2 divide-gray flex justify-around py-3">
-      <div v-for="item in listWallet" :key="item.id" class="flex pl-8 gap-4">
+      <div
+        v-for="item in listWallet"
+        :key="item.id"
+        class="flex pl-8 gap-4"
+        @click="handleClickGoToDeveloping"
+      >
         <img :src="getImgUrl(item.img)" :alt="item.img" />
         <div class="text-left">
           <p>{{ item.title }}</p>
@@ -36,6 +41,9 @@ export default {
     getImgUrl(img) {
       let images = require.context("@/assets/images/", false, /\.svg$/);
       return images("./" + img + ".svg");
+    },
+    handleClickGoToDeveloping() {
+      this.$router.push({ path: "/developing" });
     },
   },
   filters: {
