@@ -9,7 +9,11 @@
     <el-tabs :tab-position="tabPosition" v-model="activeName">
       <el-tab-pane label="Sale" name="sale">
         <span slot="label">
-          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          <img
+            class="inline"
+            src="@/assets/images/Web/icon/sale.png"
+            alt="Sale"
+          />
           Sale
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
@@ -27,7 +31,11 @@
       </el-tab-pane>
       <el-tab-pane label="Bánh Mì" name="banhmi">
         <span slot="label">
-          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          <img
+            class="inline"
+            src="@/assets/images/Web/icon/banhmi.png"
+            alt="Bánh mì"
+          />
           Bánh Mì
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
@@ -45,7 +53,11 @@
       </el-tab-pane>
       <el-tab-pane label="Cơm" name="com">
         <span slot="label">
-          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          <img
+            class="inline w-12 h-12"
+            src="@/assets/images/Web/icon/rice.png"
+            alt="Cơm"
+          />
           Cơm
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
@@ -63,7 +75,11 @@
       </el-tab-pane>
       <el-tab-pane label="Pizza" name="pizza">
         <span slot="label">
-          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          <img
+            class="inline"
+            src="@/assets/images/Web/icon/Pizza.png"
+            alt="pizza"
+          />
           Pizza
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
@@ -81,7 +97,11 @@
       </el-tab-pane>
       <el-tab-pane label="Fast Food" name="fastfood">
         <span slot="label">
-          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          <img
+            class="inline"
+            src="@/assets/images/Web/icon/Hamburger.png"
+            alt="Fastfood"
+          />
           Fast Food
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">

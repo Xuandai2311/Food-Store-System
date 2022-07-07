@@ -60,9 +60,6 @@ module.exports = {
       fontFamily: {
         walsheim: "GT Walsheim",
       },
-      zIndex: {
-        9999: "9999",
-      },
     },
   },
   variants: {

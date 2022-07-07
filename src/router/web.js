@@ -8,6 +8,18 @@ export default [
   {
     path: "/",
     component: Layout,
+    redirect: "/developing",
+    children: [
+      {
+        path: "/developing",
+        name: "Developing",
+        component: () => import("@/views/WebView/DevelopingView.vue"),
+      },
+    ],
+  },
+  {
+    path: "/",
+    component: Layout,
     redirect: "/home",
     children: [
       {

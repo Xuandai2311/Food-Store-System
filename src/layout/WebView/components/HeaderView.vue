@@ -10,11 +10,10 @@
       />
     </a>
     <div class="col-span-2 flex gap-8 font-semibold text-base">
-      <router-link to="/">Home</router-link>
       <router-link to="/order">Menu</router-link>
-      <router-link to="/reservation">Reservation</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="contact">Contact</router-link>
+      <router-link to="/developing">Đặt chỗ</router-link>
+      <router-link to="/about">Về chúng tôi</router-link>
+      <router-link to="contact">liên hệ</router-link>
     </div>
     <div class="col-span-1 sm:hidden lg:block">
       <div class="flex gap-5 items-center">

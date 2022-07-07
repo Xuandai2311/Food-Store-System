@@ -9,7 +9,11 @@
     <el-tabs :tab-position="tabPosition" v-model="activeName">
       <el-tab-pane label="Sale" name="sale">
         <span slot="label">
-          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          <img
+            class="inline"
+            src="@/assets/images/Web/icon/sale.png"
+            alt="Sale"
+          />
           Sale
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
@@ -27,7 +31,11 @@
       </el-tab-pane>
       <el-tab-pane label="Trà sữa" name="milktea">
         <span slot="label">
-          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          <img
+            class="inline w-9 h-9"
+            src="@/assets/images/Web/icon/milk-tea.png"
+            alt="Trà sữa"
+          />
           Trà sữa
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
@@ -45,7 +53,11 @@
       </el-tab-pane>
       <el-tab-pane label="Cà Phê" name="coffee">
         <span slot="label">
-          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          <img
+            class="inline w-9 h-9"
+            src="@/assets/images/Web/icon/coffee.png"
+            alt="Coffe"
+          />
           Cà Phê
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
@@ -63,7 +75,11 @@
       </el-tab-pane>
       <el-tab-pane label="Nước giải khát" name="gaz">
         <span slot="label">
-          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          <img
+            class="inline w-9 h-9"
+            src="@/assets/images/Web/icon/Soda.png"
+            alt="Nước Giải Khát"
+          />
           Nước giải khát
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">
@@ -81,7 +97,11 @@
       </el-tab-pane>
       <el-tab-pane label="Rượu" name="ancohol">
         <span slot="label">
-          <img class="inline" src="@/assets/images/Web/sale.png" alt="Sale" />
+          <img
+            class="inline w-9 h-9"
+            src="@/assets/images/Web/icon/wine.png"
+            alt="Rượu"
+          />
           Rượu
         </span>
         <el-carousel :autoplay="false" :interval="4000" type="card">

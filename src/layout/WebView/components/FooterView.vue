@@ -6,9 +6,8 @@
       <a href="/">
         <img class="w-36" src="@/assets/images/Web/logo.png" alt="Logo" />
       </a>
-      <p class="my-9">
-        We cook and deliver the tastiest
-        <br />food right away to your <br />designated location
+      <p class="my-9 w-4/5 text-lg font-bold">
+        Chúng tôi nấu và mang đến những món ăn tuyệt với nhất đến cho bạn
       </p>
       <div class="flex gap-4">
         <a href>
@@ -24,30 +23,30 @@
     </div>
     <div class="col-span-2 flex sm:gap-12 lg:gap-24 text-left">
       <div>
-        <h2 class="text-lg font-semibold mb-9">About</h2>
+        <h2 class="text-lg font-semibold mb-9">Về chúng tôi</h2>
         <div class="grid gap-4">
-          <a href="/">About Us</a>
-          <a href="/">Features</a>
-          <a href="/">News</a>
+          <a href="/">Về chúng tôi</a>
+          <a href="/">Đặc trưng</a>
+          <a href="/">Tin tức</a>
           <a href="/">Menu</a>
         </div>
       </div>
       <div>
-        <h2 class="text-lg font-semibold mb-9">Company</h2>
+        <h2 class="text-lg font-semibold mb-9">Công ty</h2>
         <div class="grid gap-4">
-          <a href="/">why Đ Food</a>
-          <a href="/">Partner with Us</a>
+          <a href="/">Why Đ Food</a>
+          <a href="/">Hợp tác</a>
           <a href="/">FAQ</a>
           <a href="/">Blog</a>
         </div>
       </div>
       <div>
-        <h2 class="text-lg font-semibold mb-9">Support</h2>
+        <h2 class="text-lg font-semibold mb-9">Hỗ trợ</h2>
         <div class="grid gap-4">
-          <a href="/">Account</a>
-          <a href="/">Support Center</a>
-          <a href="/">Feedback</a>
-          <a href="/">Contact Us</a>
+          <a href="/">tài khoản</a>
+          <a href="/">Đánh giá</a>
+          <a href="/">Trung tâm hỗ trợ</a>
+          <a href="/">Liên hệ với chúng tôi</a>
         </div>
       </div>
     </div>

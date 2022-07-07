@@ -9,11 +9,12 @@
         Bạn cứ ngồi tại chỗ và đặt hàng tại đây
       </p>
       <p class="sm:text-lg text-2xl">
-        Chúng tôi sẽ nấu những món ăn ngon nhất<br />
-        mang đến tận nơi cho bạn
+        Chúng tôi sẽ nấu những món ăn ngon nhất
+        <br />mang đến tận nơi cho bạn
       </p>
       <button
         class="button-base shadow-2xl shadow-rose-400/80 w-56 mt-16 text-lg hover:bg-rose-400"
+        @click="handleClickGoToDevelopingView"
       >
         Đặt món ngay
       </button>
@@ -25,7 +26,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      centerDialogVisible: false,
+    };
+  },
+  methods: {
+    handleClickGoToDevelopingView() {
+      this.$router.push({ path: "/developing" });
+    },
+  },
+};
 </script>
 
 <style></style>
