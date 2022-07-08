@@ -1,12 +1,17 @@
 import Layout from "@/layout/WebView";
 export default [
-  //   {
-  //     path: "/login",
-  //     name: "login",
-  //     component: () => import("@/views/WebView/Login/LoginView.vue"),
-  //   },
   {
-    path: "/",
+    path: "/login",
+    name: "login",
+    component: () => import("@/views/WebView/Login/LoginView.vue"),
+  },
+  {
+    path: "/signup",
+    name: "SignUp",
+    component: () => import("@/views/WebView/Login/SignUpView.vue"),
+  },
+  {
+    path: "/developing",
     component: Layout,
     redirect: "/developing",
     children: [

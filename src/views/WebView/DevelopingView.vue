@@ -7,7 +7,7 @@
     <feedback-view />
     <el-dialog
       :visible.sync="dialogDeveloping"
-      :before-close="handleClose"
+      :before-close="handleClickClose"
       lock-scroll="true"
     >
       <div class="grid justify-items-center">
@@ -45,9 +45,6 @@ export default {
     handleClickClose() {
       this.$router.push({ path: "/home" });
     },
-    handleClose() {
-      this.$router.push({ path: "/home" });
-    },
   },
 };
 </script>
@@ -57,11 +54,11 @@ export default {
   .el-dialog__header {
     display: none;
   }
-  .el-dialog {
-    border-radius: 16px;
-  }
-  .v-modal {
-    display: none;
-  }
+}
+.v-modal {
+  display: none;
+}
+.el-dialog {
+  border-radius: 16px;
 }
 </style>

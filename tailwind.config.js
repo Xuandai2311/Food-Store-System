@@ -25,6 +25,11 @@ module.exports = {
           red: "#FF5F64",
           "red-light": "#FF5E58",
         },
+        bgLogIn: {
+          yellowDark: "#B87514",
+          yellow: "#E48700",
+          yellowLight: "#FFF4E3",
+        },
       },
       lineHeight: {
         12: "4.5rem",

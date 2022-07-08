@@ -25,28 +25,28 @@
       <div>
         <h2 class="text-lg font-semibold mb-9">Về chúng tôi</h2>
         <div class="grid gap-4">
-          <a href="/">Về chúng tôi</a>
-          <a href="/">Đặc trưng</a>
-          <a href="/">Tin tức</a>
-          <a href="/">Menu</a>
+          <a href="/developing">Về chúng tôi</a>
+          <a href="/developing">Đặc trưng</a>
+          <a href="/developing">Tin tức</a>
+          <a href="/developing">Menu</a>
         </div>
       </div>
       <div>
         <h2 class="text-lg font-semibold mb-9">Công ty</h2>
         <div class="grid gap-4">
-          <a href="/">Why Đ Food</a>
-          <a href="/">Hợp tác</a>
-          <a href="/">FAQ</a>
-          <a href="/">Blog</a>
+          <a href="/developing">Why Đ Food</a>
+          <a href="/developing">Hợp tác</a>
+          <a href="/developing">FAQ</a>
+          <a href="/developing">Blog</a>
         </div>
       </div>
       <div>
         <h2 class="text-lg font-semibold mb-9">Hỗ trợ</h2>
         <div class="grid gap-4">
-          <a href="/">tài khoản</a>
-          <a href="/">Đánh giá</a>
-          <a href="/">Trung tâm hỗ trợ</a>
-          <a href="/">Liên hệ với chúng tôi</a>
+          <a href="/developing">Tài khoản</a>
+          <a href="/developing">Đánh giá</a>
+          <a href="/developing">Trung tâm hỗ trợ</a>
+          <a href="/developing">Liên hệ với chúng tôi</a>
         </div>
       </div>
     </div>

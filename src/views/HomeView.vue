@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div class="sm:hidden text-red-base">Mobile View</div>
-    <div class="hidden sm:block">web</div>
-    <h2 class="text-red">dá</h2>
-    <login-view />
+    <login-view class="hidden sm:block" />
   </div>
 </template>
 

@@ -28,9 +28,7 @@
 <script>
 export default {
   data() {
-    return {
-      centerDialogVisible: false,
-    };
+    return {};
   },
   methods: {
     handleClickGoToDevelopingView() {
