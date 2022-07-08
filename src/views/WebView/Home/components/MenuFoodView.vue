@@ -158,4 +158,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.el-carousel__arrow i {
+  font-size: 1.9rem;
+  color: #e94b64;
+}
+.el-carousel__arrow {
+  display: block !important;
+}
+</style>
