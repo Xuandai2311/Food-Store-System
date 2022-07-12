@@ -38,7 +38,7 @@ export default {
   },
   data() {
     return {
-      dialogDeveloping: false,
+      dialogDeveloping: true,
     };
   },
   methods: {

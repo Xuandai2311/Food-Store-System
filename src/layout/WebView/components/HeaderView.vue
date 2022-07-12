@@ -1,6 +1,6 @@
 <template>
   <div
-    class="Header mb-16 grid sm:grid-cols-3 lg:grid-cols-4 items-center justify-items-center fixed w-4/5"
+    class="mb-16 grid sm:grid-cols-3 lg:grid-cols-4 items-center justify-items-center fixed w-full left-0 z-9999"
   >
     <a href="/">
       <img

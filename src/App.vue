@@ -17,7 +17,6 @@
     rgba(229, 229, 254, 0.5) 53.12%,
     #e9f3fd 89.83%
   );
-  backdrop-filter: blur(10px);
 }
 
 nav {
