@@ -38,7 +38,7 @@ export default {
   },
   data() {
     return {
-      dialogDeveloping: true,
+      dialogDeveloping: false,
     };
   },
   methods: {
@@ -54,11 +54,5 @@ export default {
   .el-dialog__header {
     display: none;
   }
-}
-.v-modal {
-  display: none;
-}
-.el-dialog {
-  border-radius: 16px;
 }
 </style>

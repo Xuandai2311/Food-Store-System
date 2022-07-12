@@ -162,6 +162,9 @@ export default {
   .el-dialog {
     border-radius: 16px;
   }
+  .el-input__inner {
+    border-radius: 20px;
+  }
 }
 .v-modal {
   display: none;
