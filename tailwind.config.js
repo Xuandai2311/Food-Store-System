@@ -53,6 +53,7 @@ module.exports = {
         100: "100vh",
         content: "calc(100vh - 25vh)",
         132: "8.25rem",
+        184.5: "11.531rem",
       },
       width: {
         182: "13.375rem",

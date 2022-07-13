@@ -1,5 +1,5 @@
 <template>
-  <div class="menu mx-28">
+  <div class="menu-web mx-28">
     <div class="text-left mb-5">
       <p class="mt-36 mb-4 font-bold text-red-base uppercase">our menu</p>
       <h2
@@ -29,7 +29,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.menu {
+.menu-web {
   .el-tabs--left .el-tabs__header.is-left {
     width: 20%;
   }

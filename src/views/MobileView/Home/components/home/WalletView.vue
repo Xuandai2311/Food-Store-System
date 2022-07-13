@@ -43,7 +43,7 @@ export default {
       return images("./" + img + ".svg");
     },
     handleClickGoToDeveloping() {
-      this.$router.push({ path: "/developing" });
+      this.$router.push({ path: "/mobile/developing" });
     },
   },
   filters: {

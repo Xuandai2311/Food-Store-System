@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="header bg-gradient-to-r from-bgHeaderHome-red to-bgHeaderHome-red-light"
-  >
+  <div class="header">
     <div class="pb-8 pt-10 grid gap-5">
       <div class="flex gap-3 justify-around">
         <div class="text-left grid w-3/5">
@@ -9,7 +7,7 @@
             >Địa chỉ hiện tại</span
           >
           <router-link
-            to="/developing"
+            to="/mobile/developing"
             tag="button"
             class="truncate font-semibold text-base text-white"
             >Trường Đại Học Kinh Doanh Và Công Nghệ Hà Nội</router-link
@@ -41,7 +39,7 @@ export default {
   },
   methods: {
     handleClickGoToDeveloping() {
-      this.$router.push({ path: "/developing" });
+      this.$router.push({ path: "/mobile/developing" });
     },
   },
 };

@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     handleClickClose() {
-      this.$router.push({ path: "/home" });
+      this.$router.push({ path: "/mobile/home" });
     },
   },
 };

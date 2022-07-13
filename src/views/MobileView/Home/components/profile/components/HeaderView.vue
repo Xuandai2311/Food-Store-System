@@ -1,7 +1,7 @@
 <template>
   <div class="header h-184.5 relative">
     <router-link
-      to="/developing"
+      to="/mobile/developing"
       class="absolute bottom-8 mx-8 text-left flex items-center gap-4"
     >
       <img class="h-16" src="@/assets/images/icon/avt.png" alt="" />

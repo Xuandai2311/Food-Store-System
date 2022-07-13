@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="menu-web">
     <h2
       class="mb-4 text-left font-bold text-red-base uppercase"
       data-aos="zoom-in-up"
@@ -159,11 +159,13 @@ export default {
 </script>
 
 <style lang="scss">
-.el-carousel__arrow i {
-  font-size: 1.9rem;
-  color: #e94b64;
-}
-.el-carousel__arrow {
-  display: block !important;
+.menu-web {
+  .el-carousel__arrow i {
+    font-size: 1.9rem;
+    color: #e94b64;
+  }
+  .el-carousel__arrow {
+    display: block !important;
+  }
 }
 </style>

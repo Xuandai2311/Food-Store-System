@@ -5,24 +5,24 @@
         :default-active="activeMenu"
         class="flex justify-around -bottom-1 pt-2 pb-3"
       >
-        <el-menu-item index="Home">
+        <el-menu-item index="Home MobileView">
           <i class="icon el-icon-s-home"></i>
-          <router-link to="/home" class="grid">Home</router-link>
+          <router-link to="/mobile/home" class="grid">Home</router-link>
         </el-menu-item>
-        <el-menu-item index="Order">
-          <router-link to="/order" class="grid">
+        <el-menu-item index="Order MobileView">
+          <router-link to="/mobile/order" class="grid">
             <i class="icon el-icon-s-order"></i>
             Order
           </router-link>
         </el-menu-item>
-        <el-menu-item index="Chat">
-          <router-link to="/chat" class="grid">
+        <el-menu-item index="Chat MobileView">
+          <router-link to="/mobile/chat" class="grid">
             <i class="icon el-icon-chat-dot-square"></i>
             Chat
           </router-link>
         </el-menu-item>
-        <el-menu-item index="Profile">
-          <router-link to="/profile" class="grid">
+        <el-menu-item index="Profile MobileView">
+          <router-link to="/mobile/profile" class="grid">
             <i class="icon el-icon-user"></i>
             Profile
           </router-link>

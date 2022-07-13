@@ -48,7 +48,7 @@ export default {
         this.isHidden = false;
       }, 3000);
       setTimeout(() => {
-        this.$router.push("/home");
+        this.$router.push("/mobile/home");
         this.$store.commit("RESET_CART");
       }, 5000);
     },

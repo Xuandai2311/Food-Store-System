@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="menu-web">
     <h2
       class="text-left mb-4 font-bold text-red-base uppercase"
       data-aos="zoom-in-up"

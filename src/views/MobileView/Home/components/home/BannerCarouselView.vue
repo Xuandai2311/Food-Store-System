@@ -53,7 +53,7 @@ export default {
       return images("./" + img + ".png");
     },
     handleClickGoToDeveloping() {
-      this.$router.push({ path: "/developing" });
+      this.$router.push({ path: "/mobile/developing" });
     },
   },
 };

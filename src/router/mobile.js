@@ -1,47 +1,52 @@
 import Layout from "@/layout/MobileView";
 export default [
   {
-    path: "/login",
-    name: "login",
+    path: "/mobile/",
+    name: "mobile",
+    component: () => import("@/views/MobileView/Starteed/StarteedView.vue"),
+  },
+  {
+    path: "/mobile/login",
+    name: "Login MobileView",
     component: () => import("@/views/MobileView/Starteed/components/LoginView"),
   },
   {
-    path: "/register",
-    name: "register",
+    path: "/mobile/register",
+    name: "Register MobileView",
     component: () =>
       import("@/views/MobileView/Starteed/components/RegisterView"),
   },
   {
-    path: "/",
+    path: "/mobile/developing",
     component: Layout,
     redirect: "/developing",
     children: [
       {
-        path: "/developing",
-        name: "Developing",
+        path: "/mobile/developing",
+        name: "Developing MobileView",
         component: () => import("@/views/MobileView/DevelopView.vue"),
       },
     ],
   },
   {
-    path: "/",
+    path: "/mobile/home",
     component: Layout,
-    redirect: "/home",
+    redirect: "/mobile/home",
     children: [
       {
-        path: "/home",
-        name: "Home",
+        path: "/mobile/home",
+        name: "Home MobileView",
         component: () => import("@/views/MobileView/Home/HomeView.vue"),
       },
     ],
   },
   {
-    path: "/home",
+    path: "/mobile/home",
     component: Layout,
     children: [
       {
-        path: "/home/menu_food",
-        name: "Home",
+        path: "/mobile/home/menu_food",
+        name: "DetailMenu MobileView",
         component: () =>
           import(
             "@/views/MobileView/Home/components/home/detailmenu/DetailMenu.vue"
@@ -50,67 +55,67 @@ export default [
     ],
   },
   {
-    path: "/",
+    path: "/mobile/",
     component: Layout,
     children: [
       {
-        path: "/order",
-        name: "Order",
+        path: "/mobile/order",
+        name: "Order MobileView",
         component: () =>
           import("@/views/MobileView/Home/components/order/OrderView.vue"),
       },
     ],
   },
   {
-    path: "/order",
+    path: "/mobile/order",
     component: Layout,
     children: [
       {
-        path: "/order/Cart",
-        name: "Order",
+        path: "/mobile/order/Cart",
+        name: "Cart MobileView",
         component: () =>
           import("@/views/MobileView/Home/components/order/OrderView.vue"),
       },
     ],
   },
   {
-    path: "/order/Cart/loading",
+    path: "/mobile/order/Cart/loading",
     component: () =>
       import(
         "@/views/MobileView/Home/components/order/components/LoadingOrder.vue"
       ),
   },
   {
-    path: "/",
+    path: "/mobile/",
     component: Layout,
     children: [
       {
-        path: "/chat",
-        name: "Chat",
+        path: "/mobile/chat",
+        name: "Chat MobileView",
         component: () =>
           import("@/views/MobileView/Home/components/chat/ChatView.vue"),
       },
     ],
   },
   {
-    path: "/",
+    path: "/mobile/",
     component: Layout,
     children: [
       {
-        path: "/profile",
-        name: "Profile",
+        path: "/mobile/profile",
+        name: "Profile MobileView",
         component: () =>
           import("@/views/MobileView/Home/components/profile/ProfileView.vue"),
       },
     ],
   },
   {
-    path: "/profile",
+    path: "/mobile/profile",
     component: Layout,
     children: [
       {
-        path: "/profile/edit-profile",
-        name: "Profile",
+        path: "/mobile/profile/edit-profile",
+        name: "EditProfile MobileView",
         component: () =>
           import(
             "@/views/MobileView/Home/components/profile/components/EditProfile.vue"

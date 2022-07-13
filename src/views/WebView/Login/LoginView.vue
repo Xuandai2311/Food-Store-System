@@ -1,5 +1,5 @@
 <template>
-  <div class="login hidden sm:block py-20">
+  <div class="login-web hidden sm:block py-20">
     <img
       src="@/assets/images/Web/Saly-3-bg-Login.png"
       alt="Saly-3"
@@ -152,7 +152,7 @@ export default {
 </script>
 
 <style lang="scss">
-.login {
+.login-web {
   background-image: url("@/assets/images/Web/bg-LogIn.png");
   background-size: cover;
   height: 100vh;
@@ -165,11 +165,5 @@ export default {
   .el-input__inner {
     border-radius: 20px;
   }
-}
-.v-modal {
-  display: none;
-}
-.el-dialog__headerbtn .el-dialog__close {
-  display: none;
 }
 </style>

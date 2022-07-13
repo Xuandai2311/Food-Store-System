@@ -17,14 +17,14 @@
       :withHeader="false"
     >
       <router-link
-        to="/login"
+        to="/mobile/login"
         tag="button"
         @click="drawer = true"
         class="my-8 button-base"
         >Login</router-link
       >
       <router-link
-        to="/register"
+        to="/mobile/register"
         tag="button"
         @click="drawer = true"
         class="text-red-base text-base font-semibold bg-white w-4/5 h-16 border-0 rounded-4xl"

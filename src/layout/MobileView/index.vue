@@ -4,7 +4,7 @@
       <app-main />
     </div>
     <bottom-navigation-bar class="fixed bottom-0 w-full shadow-5xl z-9999" />
-    <div v-if="$route.path != '/order/cart'">
+    <div v-if="$route.path != '/mobile/order/cart'">
       <el-badge
         v-if="cartAmount > 0"
         :value="cartAmount"
@@ -41,9 +41,9 @@ export default {
     handleClick() {
       let path;
       if (this.cartAmount > 0) {
-        path = "/order/cart";
+        path = "/mobile/order/cart";
       } else {
-        path = "/order";
+        path = "/mobile/order";
       }
       return this.$router.push(path);
     },

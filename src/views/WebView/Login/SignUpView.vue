@@ -114,10 +114,4 @@ export default {
     border-radius: 16px;
   }
 }
-.v-modal {
-  display: none;
-}
-.el-dialog__headerbtn .el-dialog__close {
-  display: none;
-}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="Order_Detail">
     <div
-      class="header fixed w-full bg-white z-10 py-3 border-b-2 border-gray shadow-sm"
+      class="header fixed top-0 w-full bg-white z-10 py-3 border-b-2 border-gray shadow-sm"
     >
       <div class="background-header flex justify-between mx-4">
         <div class="text-left flex gap-6 items-center">
@@ -122,7 +122,7 @@ export default {
   methods: {
     handleClickOrder() {
       setTimeout(() => {
-        this.$router.push("/order/Cart/loading");
+        this.$router.push("/mobile/order/Cart/loading");
       }, 700);
     },
   },

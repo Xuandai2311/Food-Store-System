@@ -54,5 +54,8 @@ export default {
   .el-dialog__header {
     display: none;
   }
+  .el-dialog {
+    border-radius: 16px;
+  }
 }
 </style>

@@ -2,14 +2,14 @@
   <div class="login w-4/5 mx-auto">
     <div class="grid grid-cols-2 mt-5">
       <router-link
-        to="/login"
+        to="/mobile/login"
         tag="button"
         class="col-span-1 text-2xl font-semibold text-black"
         >Đăng nhập
         <div class="w-3/4 mx-auto shadow-mini border-b-2 border-red-base"></div
       ></router-link>
       <router-link
-        to="/register"
+        to="/mobile/register"
         tag="button"
         class="col-span-1 text-2xl font-semibold text-black"
         >Đăng kí</router-link
@@ -34,7 +34,7 @@
       <span class="text-red text-left">Quên mật khẩu?</span>
     </div>
     <el-button
-      to="/home"
+      to="/mobile/home"
       tag="button"
       @click="handleLoggin(loginInfor)"
       class="my-8 button-base"
@@ -87,7 +87,7 @@ export default {
     handleLoggin() {
       this.$refs["ruleForm"].validate((valid) => {
         if (valid) {
-          this.$router.replace("/home");
+          this.$router.replace("/mobile/home");
         }
       });
     },

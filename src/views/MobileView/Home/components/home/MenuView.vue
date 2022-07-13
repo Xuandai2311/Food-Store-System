@@ -9,19 +9,14 @@
               src="@/assets/images/backgroundmenufood.png"
               alt="Background Menu Food"
             />
-            <router-link to="/home/menu_food" tag="button">
+            <router-link to="/mobile/home/menu_food" tag="button">
               <h2 class="absolute text-white font-bold text-4xl top-20 left-17">
                 Menu Đồ Ăn
               </h2>
             </router-link>
           </div>
           <div class="grid grid-cols-2 gap-5">
-            <div
-              class="menu-item"
-              v-for="item in listMenuFood"
-              :key="item.id"
-              @click="abc"
-            >
+            <div class="menu-item" v-for="item in listMenuFood" :key="item.id">
               <img
                 class="w-28 h-28 rounded-full"
                 :src="getImgUrl(item.img)"
@@ -116,9 +111,6 @@ export default {
     getImgUrl(img) {
       let images = require.context("@/assets/images/", false, /\.png$/);
       return images("./" + img + ".png");
-    },
-    abc() {
-      console.log("test");
     },
   },
 };

@@ -150,7 +150,7 @@ export default {
   },
   methods: {
     handleClickGoToDeveloping() {
-      this.$router.push({ path: "/developing" });
+      this.$router.push({ path: "/mobile/developing" });
     },
   },
 };
