@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import web from "./web";
 import mobile from "./mobile";
+import admin from "./admin";
 Vue.use(VueRouter);
 
 // const routes = [
@@ -15,7 +16,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes: [...web, ...mobile],
+  routes: [...web, ...mobile, ...admin],
 });
 
 export default router;

@@ -30,6 +30,9 @@ module.exports = {
           yellow: "#E48700",
           yellowLight: "#FFF4E3",
         },
+        admin: {
+          greenBase: "#2dce89",
+        },
       },
       lineHeight: {
         12: "4.5rem",
