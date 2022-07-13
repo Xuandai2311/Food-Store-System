@@ -6,7 +6,9 @@ import ElementUI from "element-ui";
 import locale from "element-ui/lib/locale/lang/en";
 import "element-ui/lib/theme-chalk/index.css";
 import "@/assets/tailwind.css";
-
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
 Vue.config.productionTip = false;
 Vue.use(ElementUI, { locale });
 Vue.use(ElementUI);
@@ -18,8 +20,10 @@ Vue.filter("formatMoney", function (value) {
     });
   }
 });
-
 new Vue({
+  created() {
+    AOS.init();
+  },
   router,
   store,
   render: (h) => h(App),
