@@ -269,6 +269,9 @@ export default new Vuex.Store({
     PUSH_TIME: (state, timestamp) => {
       state.orderList.push(timestamp);
     },
+    ADMIN_ADD_PRODUCT: (state, payload) => {
+      state.Products.unshift(payload);
+    },
   },
   actions: {},
   modules: {},

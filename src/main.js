@@ -8,7 +8,7 @@ import "element-ui/lib/theme-chalk/index.css";
 import "@/assets/tailwind.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "@/styles/index.scss"; // global css
 Vue.config.productionTip = false;
 Vue.use(ElementUI, { locale });
 Vue.use(ElementUI);
