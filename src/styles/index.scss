@@ -1,0 +1,12 @@
+@import './animation.scss';
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 100px;
+	background-color: #27B276;
+}
