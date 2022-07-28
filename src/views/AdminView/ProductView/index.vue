@@ -393,6 +393,8 @@ export default {
       }
       this.formAddProduct.id = Math.floor(Math.random() * 100);
       this.formAddProduct.img = this.img.slice(0, -4);
+      this.formAddProduct.cost = Number(this.formAddProduct.cost);
+      this.formAddProduct.priceSale = Number(this.formAddProduct.priceSale);
       console.log("check", this.formAddProduct.img);
       this.$store.commit("ADMIN_ADD_PRODUCT", this.formAddProduct);
       console.log(this.formAddProduct);
