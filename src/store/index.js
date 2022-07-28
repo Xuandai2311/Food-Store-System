@@ -272,6 +272,22 @@ export default new Vuex.Store({
     ADMIN_ADD_PRODUCT: (state, payload) => {
       state.Products.unshift(payload);
     },
+    ADMIN_EDIT_PRODUCT: (state, payload) => {
+      const findProduct = state.Products.findIndex(
+        (product) => product.id === payload.id
+      );
+      if (findProduct !== -1) {
+        state.Products[findProduct] = payload;
+      }
+    },
+    REMOVE_PRODUCT: (state, payload) => {
+      const findProductRemove = state.Products.findIndex(
+        (product) => product.id == payload
+      );
+      console.log("check paylof", payload);
+      console.log("check", findProductRemove);
+      state.Products.splice(findProductRemove, 1);
+    },
   },
   actions: {},
   modules: {},
