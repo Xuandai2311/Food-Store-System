@@ -3,10 +3,11 @@
     <div class="bg-white rounded-2xl p-7 shadow-2xl flex gap-5 justify-evenly">
       <el-input
         placeholder="Nhập tên sản phẩm để tìm kiếm"
-        v-model="input"
+        :change="filteredData()"
+        v-model="ProductName"
         class="w-1/3"
       ></el-input>
-      <el-select v-model="value" placeholder="Phân loại">
+      <el-select v-model="Categories" placeholder="Phân loại">
         <el-option
           v-for="item in categories"
           :key="item.id"
@@ -14,7 +15,7 @@
           :value="item.name"
         ></el-option>
       </el-select>
-      <el-select v-model="value" placeholder="Phân loại">
+      <el-select v-model="valueMoney" placeholder="Phân loại">
         <el-option
           label="giá từ 10.000vnđ - 50.000vnđ"
           value="10-50"
@@ -32,7 +33,7 @@
       >
     </div>
     <div class="bg-white rounded-2xl shadow-2xl p-7 mt-6">
-      <el-table :data="Products" stripe height="40rem">
+      <el-table :data="Products" stripe height="calc(100vh - 360px)">
         <el-table-column
           label="STT"
           type="index"
@@ -306,8 +307,9 @@ export default {
       dialogImageUrl: "",
       dialogVisible: false,
       disabled: false,
-      value: "",
-      input: "",
+      Categories: "",
+      ProductName: "",
+      valueMoney: "",
       dialogDrawerAddProduct: false,
       dialogDrawerEditProduct: false,
       img: "",
@@ -333,10 +335,14 @@ export default {
         sale: false,
         type: false,
       },
+      listProduct: "",
     };
   },
   computed: {
     ...mapGetters(["Products", "categories"]),
+  },
+  created() {
+    this.listProduct = this.Products;
   },
   methods: {
     getImgWebPng,
@@ -433,6 +439,14 @@ export default {
     },
     hanlderClickDelete(id) {
       this.$store.commit("REMOVE_PRODUCT", id);
+    },
+    filteredData() {
+      console.log("input data", this.listProduct);
+      const search = this.Products.filter((product) =>
+        product.title.toLowerCase().includes(this.ProductName.toLowerCase())
+      );
+      this.listProduct = search;
+      console.log("check data", this.listProduct);
     },
   },
 };

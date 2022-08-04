@@ -89,10 +89,10 @@ export default {
   methods: {
     handleCommand(command) {
       if (command == 1) {
-        this.$router.push({ path: "/developing" });
+        this.$router.push({ path: "/mobile" });
       }
       if (command == 2) {
-        this.$router.push({ path: "/developing" });
+        this.$router.push({ path: "/admin" });
       }
       if (command == 3) {
         this.$router.push({ path: "/Login" });
