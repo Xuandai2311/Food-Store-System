@@ -440,14 +440,14 @@ export default {
     hanlderClickDelete(id) {
       this.$store.commit("REMOVE_PRODUCT", id);
     },
-    filteredData() {
-      console.log("input data", this.listProduct);
-      const search = this.Products.filter((product) =>
-        product.title.toLowerCase().includes(this.ProductName.toLowerCase())
-      );
-      this.listProduct = search;
-      console.log("check data", this.listProduct);
-    },
+    // filteredData() {
+    //   console.log("input data", this.listProduct);
+    //   const search = this.Products.filter((product) =>
+    //     product.title.toLowerCase().includes(this.ProductName.toLowerCase())
+    //   );
+    //   this.listProduct = search;
+    //   console.log("check data", this.listProduct);
+    // },
   },
 };
 </script>

@@ -14,6 +14,7 @@
       <router-link to="/developing">Đặt chỗ</router-link>
       <router-link to="/developing">Về chúng tôi</router-link>
       <router-link to="/developing">liên hệ</router-link>
+      <router-link to="/mobile">Mobile</router-link>
     </div>
     <div class="col-span-1 sm:hidden lg:block">
       <div class="flex gap-5 items-center">
